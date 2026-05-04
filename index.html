@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" translate="no">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Giamo & Kim Uyên — 29 August 2026</title>
   <meta property="og:title"       content="Giamo & Kim Uyên — 29 August 2026">
   <meta property="og:description" content="Get ready to raise a glass with us — Come hungry, happy, and ready to party!">
+  <meta name="google" content="notranslate">
+
+  <!-- Resolve theme before <img> is parsed, so only the matching hero image downloads. -->
+  <script>
+    (function () {
+      var saved;
+      try { saved = localStorage.getItem('weddingTheme'); } catch (_) {}
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = (saved === 'dark' || (saved !== 'light' && prefersDark)) ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      window.__initialTheme = theme;
+    })();
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -790,6 +803,32 @@
       .map-link { padding-bottom: 4px; }
     }
 
+    /* ── Inline form error (replaces alert) ── */
+    .form-error {
+      display: none;
+      margin-top: 14px;
+      padding: 12px 16px;
+      border: 1px solid #B04030;
+      background: rgba(176, 64, 48, 0.10);
+      color: #C85040;
+      font-family: 'EB Garamond', serif;
+      font-size: 15px;
+      text-align: center;
+    }
+    .form-error.show { display: block; }
+
+    /* ── Respect reduced-motion preference ── */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .petal,
+      .hero-scroll-line { animation: none !important; }
+      .petals-layer { display: none; }
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -806,7 +845,7 @@
   </nav>
 
   <!-- ══ AUDIO ════════════════════════════════ -->
-  <audio id="bg-music" loop preload="auto">
+  <audio id="bg-music" loop preload="none">
     <source src="./Gentle Hands.mp3" type="audio/mpeg">
   </audio>
 
@@ -819,9 +858,14 @@
 
     <!-- Background image — blurs & fades as you scroll, sharpens on return -->
     <div class="hero-bg-wrap" aria-hidden="true">
-      <img class="hero-bg-img" id="hero-bg-img"
-           src="./hero-bg-light.png" alt="" draggable="false">
+      <img class="hero-bg-img" id="hero-bg-img" alt="" draggable="false">
     </div>
+    <script>
+      (function () {
+        var img = document.getElementById('hero-bg-img');
+        if (img) img.src = window.__initialTheme === 'light' ? './hero-bg-light.png' : './hero-bg.png';
+      })();
+    </script>
 
     <!-- CSS cloud corners -->
     <div class="hero-cloud hero-cloud-tl" aria-hidden="true">
@@ -866,11 +910,11 @@
       <p class="hero-diamonds">✦ &nbsp; ✦ &nbsp; ✦</p>
       <p class="hero-eyebrow" data-i18n="hero_eyebrow">You are invited to the wedding of</p>
       <span class="hero-name">Giamo Van den Eerenbeemt</span>
-      <span class="hero-and">and</span>
+      <span class="hero-and" data-i18n="and_word">and</span>
       <span class="hero-name">Kim Uyên Vuong</span>
       <div class="hero-rule"></div>
       <div class="hero-date-block">
-        <span class="hero-date-num">29<sup class="hero-date-sup">th</sup></span>
+        <span class="hero-date-num">29<sup class="hero-date-sup" data-i18n="date_ord">th</sup></span>
         <span class="hero-date-month" data-i18n="month">august</span>
         <span class="hero-date-year">2026</span>
       </div>
@@ -962,6 +1006,7 @@
           </div>
         </div>
         <button type="submit" class="btn-submit" data-i18n="btn_submit">Send RSVP</button>
+        <div class="form-error" id="form-error" role="alert"></div>
         <p class="form-note" data-i18n="rsvp_deadline">Please respond by 1 June 2026</p>
       </form>
       <div id="success-box">
@@ -1049,6 +1094,8 @@
     const T = {
       en: {
         lang_label:'Language', hero_eyebrow:'You are invited to the wedding of',
+        and_word:'and', date_ord:'th',
+        alert_error:'Something went wrong sending your RSVP. Please check your internet connection and try again — or contact us directly if it keeps failing.',
         month:'august', netherlands:'Netherlands',
         tagline_main:'GET READY TO RAISE\nA GLASS WITH US',
         tagline_sub:'Come hungry, happy, and ready to party!', scroll:'scroll',
@@ -1069,6 +1116,8 @@
       },
       nl: {
         lang_label:'Taal', hero_eyebrow:'Je bent uitgenodigd voor de bruiloft van',
+        and_word:'en', date_ord:'',
+        alert_error:'Er ging iets mis bij het versturen van je RSVP. Controleer je internetverbinding en probeer het opnieuw — of neem rechtstreeks contact met ons op als het blijft mislukken.',
         month:'augustus', netherlands:'Nederland',
         tagline_main:'MAAK JE KLAAR OM\nTE PROOSTEN',
         tagline_sub:'Kom hongerig, vrolijk en klaar om te feesten!', scroll:'scroll',
@@ -1089,6 +1138,8 @@
       },
       it: {
         lang_label:'Lingua', hero_eyebrow:'Sei invitato al matrimonio di',
+        and_word:'e', date_ord:'',
+        alert_error:"Qualcosa è andato storto nell'invio del tuo RSVP. Controlla la connessione internet e riprova — oppure contattaci direttamente se il problema persiste.",
         month:'agosto', netherlands:'Paesi Bassi',
         tagline_main:'A CUORE APERTO\nE CON UN CALICE PIENO,',
         tagline_sub:'tra un brindisi e una risata,\nil bello sarà semplicemente stare insieme!', scroll:'scorri',
@@ -1109,6 +1160,8 @@
       },
       vi: {
         lang_label:'Ngôn ngữ', hero_eyebrow:'Trân trọng kính mời bạn chung vui lễ cưới của',
+        and_word:'và', date_ord:'',
+        alert_error:'Đã xảy ra lỗi khi gửi xác nhận của bạn. Vui lòng kiểm tra kết nối internet và thử lại — hoặc liên hệ trực tiếp với tụi mình nếu vẫn không gửi được.',
         month:'tháng 8', netherlands:'Hà Lan',
         tagline_main:'HÃY SẴN SÀNG\nNÂNG LY CÙNG CHÚNG TÔI',
         tagline_sub:'Tinh thần phấn khởi và sẵn sàng vui hết mình!', scroll:'cuộn xuống',
@@ -1132,12 +1185,27 @@
     let lang = 'en';
 
     function setLang(code, btn) {
+      if (!T[code]) return;
       lang = code;
-      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.lang-btn').forEach(b => {
+        const isActive = b.textContent.trim().toLowerCase() === code;
+        b.classList.toggle('active', isActive);
+        b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
       if (btn) btn.classList.add('active');
       document.documentElement.lang = code;
       document.getElementById('hidden-lang').value = code;
+      try { localStorage.setItem('weddingLang', code); } catch (_) {}
       apply(code);
+    }
+
+    function _detectLang() {
+      try {
+        const saved = localStorage.getItem('weddingLang');
+        if (saved && T[saved]) return saved;
+      } catch (_) {}
+      const nav = (navigator.language || 'en').toLowerCase().slice(0, 2);
+      return T[nav] ? nav : 'en';
     }
 
     function apply(code) {
@@ -1152,7 +1220,11 @@
         if (t[k] !== undefined) el.placeholder = t[k];
       });
       const gb = document.getElementById('gratitude-body');
-      if (gb) gb.innerHTML = `<p>${t.gift_p1}</p><p style="margin-top:22px">${t.gift_p2}</p>`;
+      if (gb) {
+        let html = `<p>${t.gift_p1}</p>`;
+        if (t.gift_p2 && t.gift_p2.trim()) html += `<p style="margin-top:22px">${t.gift_p2}</p>`;
+        gb.innerHTML = html;
+      }
       document.title = `Giamo & Kim Uyên — 29 ${t.month} 2026`;
     }
 
@@ -1184,18 +1256,11 @@
       _applyThemeImage(next);
     }
 
-    /* Theme priority: 1) saved preference  2) device setting  3) light fallback */
-    (function() {
-      var saved;
-      try { saved = localStorage.getItem('weddingTheme'); } catch(_) {}
-      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var useDark = (saved === 'dark') || (saved === null && prefersDark);
-      if (useDark) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        document.getElementById('theme-btn').textContent = '☽';
-        _applyThemeImage('dark');
-      }
-    })();
+    /* Theme is resolved by the head script before any DOM is parsed.
+       Sync the toggle button glyph with the resolved theme. */
+    if (document.documentElement.getAttribute('data-theme') === 'dark') {
+      document.getElementById('theme-btn').textContent = '☽';
+    }
 
     /* ── FORM ─────────────────────────────── */
     function openGroup(show) {
@@ -1205,23 +1270,31 @@
     document.getElementById('rsvp-form').addEventListener('submit', async e => {
       e.preventDefault();
       const form = e.target, btn = form.querySelector('.btn-submit');
+      const errBox = document.getElementById('form-error');
       btn.disabled = true;
+      errBox.classList.remove('show');
+      const showError = () => {
+        errBox.textContent = T[lang].alert_error;
+        errBox.classList.add('show');
+        btn.disabled = false;
+      };
       try {
         const res = await fetch(form.action, { method:'POST', body: new FormData(form), headers:{'Accept':'application/json'} });
-        if (res.ok || form.action.includes('YOUR_FORM_ID')) {
+        if (res.ok) {
           form.style.display = 'none';
           const t = T[lang];
           document.getElementById('success-h').textContent = t.success_h;
           document.getElementById('success-p').textContent = t.success_p;
           document.getElementById('success-box').style.display = 'block';
-        } else { btn.disabled = false; alert('Something went wrong — please contact us directly.'); }
-      } catch(_) {
-        form.style.display = 'none';
-        document.getElementById('success-box').style.display = 'block';
+        } else {
+          showError();
+        }
+      } catch (_) {
+        showError();
       }
     });
 
-    apply('en');
+    setLang(_detectLang());
 
     /* ── FALLING PETALS ───────────────────── */
     (function () {
@@ -1315,34 +1388,54 @@
     (function () {
       var audio = document.getElementById('bg-music');
       var btn   = document.getElementById('music-btn');
+      // playing = the user's *intent*: true means "music should be playing".
+      // Visibility events pause/resume the audio without flipping this flag.
       var playing = false;
+
+      function reflectOn() {
+        btn.classList.add('playing');
+        btn.textContent = '♫';
+      }
+      function reflectOff() {
+        btn.classList.remove('playing');
+        btn.textContent = '♪';
+      }
 
       function startMusic() {
         audio.play().then(function () {
-          btn.classList.add('playing');
-          btn.textContent = '♫';
           playing = true;
+          reflectOn();
         }).catch(function () {});
       }
 
       window.toggleMusic = function () {
         if (playing) {
-          audio.pause();
-          btn.classList.remove('playing');
-          btn.textContent = '♪';
           playing = false;
+          audio.pause();
+          reflectOff();
         } else {
           startMusic();
         }
       };
 
-      /* Try immediate autoplay; if blocked, start on first user interaction */
+      /* Pause when the tab/page is hidden (mobile lock screen, tab switch),
+         resume when visible again — but only if the user wanted it on. */
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+          if (!audio.paused) audio.pause();
+        } else if (playing) {
+          audio.play().catch(function () {});
+        }
+      });
+
+      /* Try immediate autoplay; if blocked, start on first deliberate interaction.
+         'scroll' is intentionally NOT in the list — we don't want music to start
+         just because someone scrolls to read the invite. */
       audio.play().then(function () {
-        btn.classList.add('playing');
-        btn.textContent = '♫';
         playing = true;
+        reflectOn();
       }).catch(function () {
-        var events = ['click', 'keydown', 'touchstart', 'scroll'];
+        var events = ['click', 'keydown', 'touchstart'];
         function onInteract() {
           startMusic();
           events.forEach(function (ev) { document.removeEventListener(ev, onInteract); });
