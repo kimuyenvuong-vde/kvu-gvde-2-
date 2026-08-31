@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" translate="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank you — Giamo &amp; Kim Uyên — 29 August 2026</title>
+<meta property="og:title"       content="Thank you — Giamo &amp; Kim Uyên — 29 August 2026">
+<meta property="og:description" content="We got married. Thank you for being there. Photo booth pictures, your own photos, and more to come.">
+<meta property="og:image"       content="./assets/hero-signing.jpg">
+<meta name="google" content="notranslate">
+
+<script>
+  /* Light is the default for this page. Dark only if the visitor
+     picked it here, on purpose. The system colour scheme and the
+     invite site's saved choice are both ignored on purpose. */
+  (function () {
+    var saved;
+    try { saved = localStorage.getItem('thanksTheme'); } catch (_) {}
+    var theme = saved === 'dark' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+    window.__initialTheme = theme;
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── DARK THEME (default) ──────────────── */
+:root, [data-theme="dark"] {
+  --bg:            #070706;
+  --bg2:           #0D0C0A;
+  --bg3:           #0F0E0B;
+  --bg-glass:      rgba(7, 7, 6, 0.82);
+  --gold:          #D4A84A;
+  --gold-bright:   #F0C85A;
+  --gold-pale:     #F8DF90;
+  --gold-dim:      #A07830;
+  --gold-dark:     #6A5018;
+  --red:           #8B1A12;
+  --red-mid:       #AB2018;
+  --text:          #E8C060;
+  --text-bright:   #F8D878;
+  --text-dim:      #B89040;
+  --text-body:     #D4A848;
+  --border:        #6A5018;
+  --card-bg:       #0D0C0A;
+  --hero-red-1:    rgba(160,28,20,0.72);
+  --hero-red-2:    rgba(145,24,16,0.62);
+  --frame-bg:      #0B0A08;
+  --scrim:         rgba(7,7,6,0.96);
+}
+
+/* ── LIGHT THEME ────────────────────────── */
+[data-theme="light"] {
+  --bg:            #F8F2E4;
+  --bg2:           #F8F2E4;
+  --bg3:           #F0E8D0;
+  --bg-glass:      rgba(248, 242, 228, 0.82);
+  --gold:          #7A5010;
+  --gold-bright:   #9A6818;
+  --gold-pale:     #B88828;
+  --gold-dim:      #5A3C0A;
+  --gold-dark:     #C8A048;
+  --red:           #8B1A12;
+  --red-mid:       #AB2018;
+  --text:          #2C1810;
+  --text-bright:   #1A0E08;
+  --text-dim:      #5C3A20;
+  --text-body:     #3C2810;
+  --border:        #C8A048;
+  --card-bg:       #F8F2E4;
+  --hero-red-1:    rgba(120,20,14,0.25);
+  --hero-red-2:    rgba(110,18,12,0.20);
+  --frame-bg:      #F0E8D0;
+  --scrim:         rgba(28,16,8,0.94);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'EB Garamond', serif;
+  background: var(--bg);
+  color: var(--text-body);
+  line-height: 1.8;
+  overflow-x: hidden;
+  transition: background 0.35s, color 0.35s;
+}
+
+/* ── TOP BAR ───────────────────────────── */
+.lang-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  display: flex; justify-content: flex-end; align-items: center;
+  gap: 6px; padding: 10px 20px;
+}
+.lang-bar-label {
+  font-family: 'Cinzel', serif; font-size: 9px;
+  letter-spacing: 0.3em; color: var(--gold-dim); margin-right: 4px;
+}
+.lang-btn, .theme-btn, .music-btn {
+  background: transparent; border: 1px solid var(--border); color: var(--gold-dim);
+  font-family: 'Cinzel', serif; font-size: 10px; font-weight: 500;
+  letter-spacing: 0.12em; line-height: 1; padding: 5px 13px;
+  cursor: pointer; transition: all 0.22s;
+}
+.lang-btn:hover, .lang-btn.active,
+.theme-btn:hover, .music-btn:hover, .music-btn.playing {
+  background: var(--border); color: var(--text-bright); border-color: var(--border);
+}
+.theme-btn, .music-btn {
+  margin-left: 4px; padding: 0; width: 30px; height: 28px;
+  font-size: 13px; letter-spacing: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.theme-btn { margin-left: 8px; }
+
+/* ── PETALS ────────────────────────────── */
+.petals-layer { position: fixed; inset: 0; pointer-events: none; z-index: 10; overflow: hidden; }
+.petal {
+  position: absolute; top: -40px; width: 12px; height: 14px; opacity: 0;
+  border-radius: 0 80% 0 80%;
+  animation-timing-function: linear; animation-iteration-count: infinite;
+}
+[data-theme="dark"] .petal  { background: radial-gradient(ellipse at 30% 30%, #F8DF90, #D4A84A 60%, #A07830); }
+[data-theme="light"] .petal { background: radial-gradient(ellipse at 30% 30%, #FDE8D0, #E8A88A 60%, #C07858); }
+
+/* ── HERO ──────────────────────────────── */
+.hero { position: relative; z-index: 1; padding-bottom: 10px; }
+
+.hero-media { position: relative; height: min(58svh, 70vw); min-height: 290px; overflow: hidden; }
+.hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 24%; display: block; }
+.hero-media::after {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 60% at 0% 0%,   var(--hero-red-1) 0%, transparent 62%),
+    linear-gradient(to bottom, transparent 0%, transparent 46%, color-mix(in srgb, var(--bg) 55%, transparent) 76%, var(--bg) 100%);
+  transition: background 0.35s;
+}
+
+.hero-inner { position: relative; z-index: 2; text-align: center; padding: 0 24px; margin-top: -6px; }
+
+.monogram { width: min(240px, 56vw); margin: 0 auto 10px; display: block; }
+[data-theme="dark"]  .monogram-dark  { display: none; }
+[data-theme="light"] .monogram-gold  { display: none; }
+
+.hero-diamonds { font-size: 12px; letter-spacing: 0.55em; color: var(--gold-dim); margin-bottom: 20px; }
+
+.hero-eyebrow {
+  font-family: 'Cinzel', serif; font-size: 10px; font-weight: 500;
+  letter-spacing: 0.4em; color: var(--gold-dim); margin-bottom: 14px;
+}
+.hero-name {
+  font-family: 'Cormorant Garamond', serif; font-weight: 500;
+  font-size: clamp(26px, 5vw, 42px); line-height: 1.15;
+  color: var(--text-bright); display: block;
+}
+.hero-and {
+  font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300;
+  font-size: clamp(17px, 3vw, 26px); color: var(--gold); display: block; margin: 2px 0;
+}
+.hero-rule { width: 130px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-dim), transparent); margin: 30px auto; }
+
+.hero-date {
+  font-family: 'Cinzel', serif; font-size: clamp(12px, 2.4vw, 15px);
+  font-weight: 500; letter-spacing: 0.32em; color: var(--text-dim);
+}
+.hero-line {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: clamp(20px, 3.6vw, 30px); color: var(--gold); margin-top: 16px;
+}
+
+.hero-scroll { margin-top: 40px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.hero-scroll-label { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.4em; color: var(--gold-dark); }
+.hero-scroll-line {
+  width: 1px; height: 52px;
+  background: linear-gradient(180deg, var(--gold-dim), transparent);
+  animation: grow 2.4s ease-in-out infinite;
+}
+@keyframes grow {
+  0%,100% { transform: scaleY(0.5); opacity: 0.3; }
+  50%     { transform: scaleY(1);   opacity: 1; }
+}
+
+/* ── SHARED SECTION FURNITURE ──────────── */
+.ornament, .wrap, .wrap-sm, .letter-section, .gallery, footer, .wave-wrap {
+  position: relative; z-index: 1;
+}
+.ornament { display: flex; align-items: center; justify-content: center; gap: 20px; padding: 0 24px; }
+.orn-line { flex: 1; max-width: 130px; height: 1px; background: linear-gradient(90deg, transparent, var(--border)); }
+.orn-line.r { background: linear-gradient(90deg, var(--border), transparent); }
+.orn-glyph { font-size: 13px; letter-spacing: 0.32em; color: var(--gold-dark); }
+
+.wrap    { max-width: 860px; margin: 0 auto; padding: 100px 24px; }
+.wrap-sm { max-width: 860px; margin: 0 auto; padding: 0 24px 100px; }
+
+.section-label {
+  display: block; font-family: 'Cinzel', serif; font-size: 10px; font-weight: 500;
+  letter-spacing: 0.42em; color: var(--gold-dim); text-align: center; margin-bottom: 14px;
+}
+.section-title {
+  font-family: 'Cinzel', serif; font-size: clamp(22px, 4vw, 38px); font-weight: 700;
+  text-align: center; letter-spacing: 0.1em; line-height: 1.3;
+  background: linear-gradient(175deg, var(--gold-pale) 0%, var(--gold) 55%, var(--gold-dim) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  margin-bottom: 46px;
+}
+[data-theme="light"] .section-title { -webkit-text-fill-color: var(--gold); background: none; }
+
+/* ── LETTER ────────────────────────────── */
+.letter-section {
+  background:
+    radial-gradient(ellipse 60% 70% at 50% 50%, rgba(100,18,12,0.10) 0%, transparent 70%),
+    var(--bg-glass);
+  transition: background 0.35s;
+}
+.letter-body {
+  max-width: 700px; margin: 0 auto; text-align: center;
+  font-family: 'Cormorant Garamond', serif; font-size: 20px; line-height: 1.9; color: var(--text-dim);
+}
+.letter-body p + p { margin-top: 22px; }
+.letter-sign {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 26px; color: var(--text-bright); margin-top: 38px; text-align: center;
+}
+
+/* ── GALLERY ───────────────────────────── */
+.gallery { padding: 92px 0; }
+.gallery-note {
+  text-align: center; max-width: 620px; margin: -30px auto 44px;
+  padding: 0 24px; font-size: 17px; color: var(--text-dim);
+}
+.track {
+  display: flex; gap: 22px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 6px max(24px, calc(50vw - 320px)) 6px; scrollbar-width: none;
+}
+.track::-webkit-scrollbar { display: none; }
+.slide {
+  flex: 0 0 auto; scroll-snap-align: center; width: min(80vw, 560px);
+  background: none; border: 0; padding: 0; cursor: zoom-in; color: inherit; font: inherit;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.slide-frame {
+  position: relative; background: var(--frame-bg);
+  border: 1px solid var(--border); padding: 14px; transition: background 0.35s, border-color 0.35s;
+}
+.slide-frame::before, .slide-frame::after {
+  content: ''; position: absolute; width: 18px; height: 18px;
+  border-color: var(--gold-dim); border-style: solid;
+}
+.slide-frame::before { top: 6px; left: 6px; border-width: 1.5px 0 0 1.5px; }
+.slide-frame::after  { bottom: 6px; right: 6px; border-width: 0 1.5px 1.5px 0; }
+.slide img {
+  width: 100%; height: clamp(280px, 52vh, 470px);
+  object-fit: contain; display: block; transition: transform 0.5s ease;
+}
+.slide:hover img, .slide:focus-visible img { transform: scale(1.015); }
+.zoomtag {
+  position: absolute; right: 16px; bottom: 16px;
+  font-family: 'Cinzel', serif; font-size: 8px; font-weight: 500; letter-spacing: 0.24em;
+  color: var(--gold-dim); background: color-mix(in srgb, var(--frame-bg) 84%, transparent);
+  border: 1px solid var(--border); padding: 5px 9px;
+}
+.slide-cap {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 18px; color: var(--text-dim); text-align: center; min-height: 2.2em;
+}
+.controls { display: flex; align-items: center; justify-content: center; gap: 22px; margin-top: 34px; }
+.nav {
+  width: 44px; height: 44px; border: 1px solid var(--border); background: transparent;
+  color: var(--gold-dim); font-family: 'Cinzel', serif; font-size: 16px; line-height: 1;
+  cursor: pointer; transition: all 0.22s;
+}
+.nav:hover { background: var(--border); color: var(--text-bright); }
+.dots { display: flex; gap: 10px; }
+.dot {
+  width: 7px; height: 7px; border: 1px solid var(--gold-dim); background: transparent;
+  padding: 0; cursor: pointer; transform: rotate(45deg); transition: all 0.25s;
+}
+.dot[aria-current="true"] { background: var(--gold); border-color: var(--gold); }
+
+/* ── VIEWER ────────────────────────────── */
+.lb { position: fixed; inset: 0; z-index: 300; background: var(--scrim); display: none; place-items: center; overscroll-behavior: contain; }
+.lb.open { display: grid; }
+.lb-stage { width: 100%; height: 100%; overflow: hidden; display: grid; place-items: center; cursor: zoom-in; touch-action: none; }
+.lb-stage.zoomed { cursor: grab; }
+.lb-stage.zoomed.dragging { cursor: grabbing; }
+.lb-stage img {
+  max-width: 94vw; max-height: 86svh; transform-origin: center center;
+  transition: transform 0.28s ease; user-select: none; -webkit-user-drag: none;
+}
+.lb-stage.dragging img { transition: none; }
+.lb-close, .lb-prev, .lb-next {
+  position: absolute; background: rgba(7,7,6,0.55); border: 1px solid #A07830;
+  color: #E8C060; font-family: 'Cinzel', serif; cursor: pointer; z-index: 2; transition: all 0.22s;
+}
+.lb-close:hover, .lb-prev:hover, .lb-next:hover { background: #6A5018; color: #F8DF90; }
+.lb-close { top: 16px; right: 16px; width: 42px; height: 42px; font-size: 15px; }
+.lb-prev, .lb-next { top: 50%; transform: translateY(-50%); width: 44px; height: 62px; font-size: 16px; }
+.lb-prev { left: 12px; } .lb-next { right: 12px; }
+.lb-cap {
+  position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
+  font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px;
+  color: #E8C060; background: rgba(7,7,6,0.72); border: 1px solid #6A5018;
+  padding: 7px 20px; max-width: min(680px, 84vw); text-align: center; pointer-events: none;
+}
+
+/* ── LINK CARDS ────────────────────────── */
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 620px) { .cards { grid-template-columns: 1fr; } }
+.card {
+  background: var(--card-bg); border: 1px solid var(--border);
+  padding: 44px 32px; text-align: center; position: relative;
+  display: flex; flex-direction: column; transition: background 0.35s, border-color 0.35s;
+}
+.card::before, .card::after {
+  content: ''; position: absolute; width: 20px; height: 20px;
+  border-color: var(--gold-dim); border-style: solid;
+}
+.card::before { top: 8px; left: 8px; border-width: 1.5px 0 0 1.5px; }
+.card::after  { bottom: 8px; right: 8px; border-width: 0 1.5px 1.5px 0; }
+.card-lbl {
+  font-family: 'Cinzel', serif; font-size: 10px; font-weight: 500;
+  letter-spacing: 0.42em; color: var(--gold-dim); margin-bottom: 16px;
+}
+.card-main {
+  font-family: 'Cinzel', serif; font-size: 18px; font-weight: 700;
+  color: var(--text-bright); letter-spacing: 0.06em; margin-bottom: 12px;
+}
+.card p { font-size: 17px; color: var(--text-dim); line-height: 1.7; margin-bottom: 26px; }
+.btn-link {
+  margin-top: auto; display: inline-block; padding: 15px 26px;
+  border: 1.5px solid var(--gold-dim); color: var(--gold);
+  font-family: 'Cinzel', serif; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.3em; text-decoration: none; transition: all 0.25s;
+}
+.btn-link:hover { background: var(--gold-dark); color: var(--gold-pale); }
+[data-theme="light"] .btn-link:hover { color: #F8F2E4; }
+
+.pending {
+  margin: 34px auto 0; max-width: 620px; text-align: center;
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 19px; color: var(--text-dim);
+}
+
+/* ── WAVE + FOOTER ─────────────────────── */
+.wave-svg { display: block; width: 100%; height: 110px; }
+footer { text-align: center; padding: 56px 24px 48px; border-top: 1px solid var(--border); background: var(--bg-glass); transition: background 0.35s; }
+.footer-mono { width: 132px; margin: 0 auto 20px; display: block; opacity: 0.7; }
+.footer-names { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 30px; color: var(--text-bright); margin-bottom: 10px; }
+.footer-date  { font-family: 'Cinzel', serif; font-size: 11px; font-weight: 500; letter-spacing: 0.32em; color: var(--gold-dim); }
+
+/* ── RESPONSIVE ────────────────────────── */
+@media (max-width: 640px) {
+  .lang-bar-label { display: none; }
+  .wrap { padding: 70px 20px; }
+  .wrap-sm { padding: 0 20px 70px; }
+  .gallery { padding: 66px 0; }
+  .track { padding: 6px 8vw; }
+  .slide { width: 84vw; }
+}
+@media (max-width: 480px) {
+  .lang-bar { padding: 8px 12px; gap: 3px; }
+  .lang-btn { padding: 5px 9px; font-size: 9px; letter-spacing: 0.05em; }
+  .theme-btn, .music-btn { margin-left: 4px; width: 28px; }
+  .wrap { padding: 52px 18px; }
+  .wrap-sm { padding: 0 18px 52px; }
+  .section-title { margin-bottom: 30px; letter-spacing: 0.06em; }
+  .letter-body { font-size: 18px; }
+  .card { padding: 30px 20px; }
+  .orn-line { max-width: 48px; }
+  .lb-prev, .lb-next { width: 38px; height: 52px; }
+  footer { padding: 40px 18px 32px; }
+  .footer-names { font-size: 26px; }
+}
+@media (hover: none) {
+  .lang-btn, .theme-btn, .music-btn { min-height: 36px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .petal, .hero-scroll-line { animation: none !important; }
+  .petals-layer { display: none; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+</style>
+</head>
+<body>
+
+<nav class="lang-bar">
+  <span class="lang-bar-label" data-i18n="lang_label">Language</span>
+  <button class="lang-btn active" onclick="setLang('en',this)">EN</button>
+  <button class="lang-btn"        onclick="setLang('nl',this)">NL</button>
+  <button class="lang-btn"        onclick="setLang('it',this)">IT</button>
+  <button class="lang-btn"        onclick="setLang('vi',this)">VI</button>
+  <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle light / dark">☀</button>
+  <button class="music-btn" id="music-btn" onclick="toggleMusic()" title="Toggle music">♪</button>
+</nav>
+
+<audio id="bg-music" loop preload="none">
+  <source src="./music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="petals-layer" id="petals-layer"></div>
+
+<!-- ══ HERO ══ -->
+<header class="hero">
+  <div class="hero-media">
+    <img src="./assets/hero-signing.jpg" alt="Giamo and Kim Uyên signing the marriage certificate">
+  </div>
+  <div class="hero-inner">
+    <img class="monogram monogram-gold" src="./assets/monogram-gold.png" alt="">
+    <img class="monogram monogram-dark" src="./assets/monogram-dark.png" alt="">
+    <p class="hero-diamonds">✦ &nbsp; ✦ &nbsp; ✦</p>
+    <p class="hero-eyebrow" data-i18n="hero_eyebrow">On 29 august 2026 we married</p>
+    <span class="hero-name">Giamo Van den Eerenbeemt</span>
+    <span class="hero-and" data-i18n="and_word">and</span>
+    <span class="hero-name">Kim Uyên Vuong</span>
+    <div class="hero-rule"></div>
+    <p class="hero-date">29 <span data-i18n="month">august</span> 2026</p>
+    <p class="hero-line" data-i18n="hero_line">Thank you for being there.</p>
+    <div class="hero-scroll">
+      <span class="hero-scroll-label" data-i18n="scroll">scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </div>
+</header>
+
+<div class="ornament"><span class="orn-line"></span><span class="orn-glyph">✦ ✦ ✦</span><span class="orn-line r"></span></div>
+
+<!-- ══ LETTER ══ -->
+<section class="letter-section">
+  <div class="wrap">
+    <span class="section-label" data-i18n="letter_eyebrow">From Our Hearts</span>
+    <h2 class="section-title" data-i18n="letter_heading">Thank You</h2>
+    <div class="letter-body" id="letter-body"></div>
+    <p class="letter-sign">Giamo &amp; Kim Uyên</p>
+  </div>
+</section>
+
+<div class="ornament"><span class="orn-line"></span><span class="orn-glyph">✦ ✦ ✦</span><span class="orn-line r"></span></div>
+
+<!-- ══ GALLERY ══ -->
+<section class="gallery">
+  <div class="wrap" style="padding-bottom:0;">
+    <span class="section-label" data-i18n="gallery_eyebrow">The Day</span>
+    <h2 class="section-title" data-i18n="gallery_heading">A Few Moments</h2>
+  </div>
+  <p class="gallery-note" data-i18n="gallery_note">Tap any picture to open it full screen, then tap again to zoom in.</p>
+
+  <div class="track" id="track" tabindex="0" aria-label="Wedding photos"></div>
+
+  <div class="controls">
+    <button class="nav" id="prev" aria-label="Previous photo">‹</button>
+    <div class="dots" id="dots"></div>
+    <button class="nav" id="next" aria-label="Next photo">›</button>
+  </div>
+</section>
+
+<div class="ornament"><span class="orn-line"></span><span class="orn-glyph">✦ ✦ ✦</span><span class="orn-line r"></span></div>
+
+<!-- ══ PHOTOS / LINKS ══ -->
+<section class="wrap">
+  <span class="section-label" data-i18n="photos_eyebrow">The Pictures</span>
+  <h2 class="section-title" data-i18n="photos_heading">Look Back With Us</h2>
+  <div class="cards">
+    <article class="card">
+      <div class="card-lbl" data-i18n="booth_lbl">Photo Booth</div>
+      <div class="card-main" data-i18n="booth_main">Every Strip From The Night</div>
+      <p data-i18n="booth_text">All the pictures taken in the booth, ready to look through and download.</p>
+      <a class="btn-link" href="https://fotoshare.co/e/LF6JhIjmn2T3neccDnAFX" target="_blank" rel="noopener" data-i18n="booth_btn">OPEN GALLERY</a>
+    </article>
+    <article class="card">
+      <div class="card-lbl" data-i18n="upload_lbl">Your Camera Roll</div>
+      <div class="card-main" data-i18n="upload_main">Share What You Captured</div>
+      <p data-i18n="upload_text">Did you take photos or video? Please add them here. We want to see the day through your eyes too.</p>
+      <a class="btn-link" href="https://tinyurl.com/KGwedpics" target="_blank" rel="noopener" data-i18n="upload_btn">UPLOAD PHOTOS</a>
+    </article>
+  </div>
+  <p class="pending" data-i18n="pending">The photographer's official pictures are still being edited. They will appear on this page as soon as we have them.</p>
+</section>
+
+<!-- ══ WAVE ══ -->
+<svg class="wave-svg" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0,58 C72,32 108,78 168,54 C228,30 264,74 324,54 C384,34 420,72 480,54
+           C540,36 576,72 636,54 C696,36 732,72 792,54 C852,36 888,72 948,54
+           C1008,36 1044,72 1104,54 C1164,36 1200,72 1260,54 C1320,36 1380,72 1440,56
+           L1440,110 L0,110 Z" fill="#5A0C08" opacity="0.70"/>
+  <path d="M0,65 C66,44 106,84 164,64 C222,44 262,82 320,64 C378,46 418,82 476,64
+           C534,46 574,82 632,64 C690,46 730,82 788,64 C846,46 886,82 944,64
+           C1002,46 1042,82 1100,64 C1158,46 1198,82 1256,64 C1314,46 1370,80 1440,65
+           L1440,110 L0,110 Z" fill="#8B1410" opacity="0.82"/>
+  <path d="M0,74 C52,57 86,90 138,76 C190,62 224,86 276,76 C328,66 362,86 414,76
+           C466,66 500,86 552,76 C604,66 638,86 690,76 C742,66 776,86 828,76
+           C880,66 914,86 966,76 C1018,66 1052,86 1104,76 C1156,66 1190,86 1242,76
+           C1294,66 1360,88 1440,76 L1440,110 L0,110 Z" fill="#B01C14" opacity="0.92"/>
+  <path d="M0,74 C52,57 86,90 138,76 C190,62 224,86 276,76 C328,66 362,86 414,76
+           C466,66 500,86 552,76 C604,66 638,86 690,76 C742,66 776,86 828,76
+           C880,66 914,86 966,76 C1018,66 1052,86 1104,76 C1156,66 1190,86 1242,76
+           C1294,66 1360,88 1440,76" fill="none" stroke="#D4A84A" stroke-width="2.2" opacity="0.60"/>
+  <path d="M95,72  Q111,62 127,72"    fill="none" stroke="#F8DF90" stroke-width="1.4" opacity="0.40"/>
+  <path d="M495,72 Q511,62 527,72"    fill="none" stroke="#F8DF90" stroke-width="1.4" opacity="0.40"/>
+  <path d="M895,72 Q911,62 927,72"    fill="none" stroke="#F8DF90" stroke-width="1.4" opacity="0.40"/>
+  <path d="M1295,72 Q1311,62 1327,72" fill="none" stroke="#F8DF90" stroke-width="1.4" opacity="0.40"/>
+</svg>
+
+<footer>
+  <img class="footer-mono monogram-gold" src="./assets/monogram-gold.png" alt="">
+  <img class="footer-mono monogram-dark" src="./assets/monogram-dark.png" alt="">
+  <p class="footer-names">Giamo &amp; Kim Uyên</p>
+  <p class="footer-date">29 <span data-i18n="month">august</span> 2026 &nbsp;·&nbsp; Noordwijkerhout</p>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+  <button class="lb-prev" id="lbPrev" aria-label="Previous photo">‹</button>
+  <button class="lb-next" id="lbNext" aria-label="Next photo">›</button>
+  <div class="lb-stage" id="lbStage"><img id="lbImg" src="" alt=""></div>
+  <p class="lb-cap" id="lbCap"></p>
+</div>
+
+<script>
+/* ── PHOTOS ───────────────────────────── */
+const PHOTOS = [
+  { file: 'invitation',   key: 'cap_invite'  },
+  { file: 'program',      key: 'cap_program' },
+  { file: 'hero-signing', key: 'cap_signing' },
+  { file: 'toast',        key: 'cap_toast'   },
+  { file: 'cake',         key: 'cap_cake'    },
+  { file: 'wishes-2',     key: 'cap_wishes1' },
+  { file: 'wishes-1',     key: 'cap_wishes2' },
+  { file: 'wishes-3',     key: 'cap_wishes3' }
+];
+
+/* ── TRANSLATIONS ─────────────────────── */
+const T = {
+  en: {
+    lang_label:'Language', and_word:'and', month:'august', scroll:'scroll',
+    hero_eyebrow:'On 29 august 2026 we married',
+    hero_line:'Thank you for being there.',
+    letter_eyebrow:'From Our Hearts', letter_heading:'Thank You',
+    letter_p1:"We got married in front of the people who made us who we are. You travelled, you dressed up, you spoke, you folded cranes, you danced until one in the morning, and you covered a whole board with wishes that we are still reading.",
+    letter_p2:"It was everything we hoped for, and a good deal louder. Thank you for the speeches and the toasts, for the tears during the ceremony, for staying on the dance floor, and for giving us a day we will be telling stories about for the rest of our lives.",
+    letter_p3:"This page is where the pictures live. Come back whenever you want to be in that room again.",
+    gallery_eyebrow:'The Day', gallery_heading:'A Few Moments',
+    gallery_note:'Tap any picture to open it full screen, then tap again to zoom in.',
+    photos_eyebrow:'The Pictures', photos_heading:'Look Back With Us',
+    booth_lbl:'Photo Booth', booth_main:'Every Strip From The Night',
+    booth_text:'All the pictures taken in the booth, ready to look through and download.',
+    booth_btn:'OPEN GALLERY',
+    upload_lbl:'Your Camera Roll', upload_main:'Share What You Captured',
+    upload_text:'Did you take photos or video? Please add them here. We want to see the day through your eyes too.',
+    upload_btn:'UPLOAD PHOTOS',
+    pending:"The photographer's official pictures are still being edited. They will appear on this page as soon as we have them.",
+    cap_invite:'The invitation that started it all.',
+    cap_program:'These kids are getting married.',
+    cap_signing:'Signing, and becoming husband and wife.',
+    cap_toast:'The first toast of the evening.',
+    cap_cake:'Two small faces on top of the cake.',
+    cap_wishes1:'The wish board, filling up as the night went on.',
+    cap_wishes2:'Four languages, one board.',
+    cap_wishes3:'Notes we are still working our way through.'
+  },
+  nl: {
+    lang_label:'Taal', and_word:'en', month:'augustus', scroll:'scroll',
+    hero_eyebrow:'Op 29 augustus 2026 zijn wij getrouwd',
+    hero_line:'Bedankt dat jullie erbij waren.',
+    letter_eyebrow:'Van Harte', letter_heading:'Dank Jullie Wel',
+    letter_p1:'We zijn getrouwd voor de mensen die ons gemaakt hebben tot wie we zijn. Jullie zijn gekomen, hebben je mooiste kleren aangetrokken, speeches gehouden, kraanvogels gevouwen, gedanst tot één uur \u2018s nachts en een heel bord volgeschreven met wensen die we nog steeds aan het lezen zijn.',
+    letter_p2:'Het was alles waar we op gehoopt hadden, en een stuk luider. Bedankt voor de speeches en de toasts, voor de tranen tijdens de ceremonie, voor het feit dat jullie op de dansvloer bleven staan, en voor een dag waar we de rest van ons leven over zullen vertellen.',
+    letter_p3:'Op deze pagina komen alle foto\u2019s te staan. Kom gerust terug wanneer je er weer even bij wilt zijn.',
+    gallery_eyebrow:'De Dag', gallery_heading:'Een Paar Momenten',
+    gallery_note:'Tik op een foto om hem groot te openen, en tik nog een keer om in te zoomen.',
+    photos_eyebrow:'De Foto\u2019s', photos_heading:'Kijk Met Ons Terug',
+    booth_lbl:'Fotohokje', booth_main:'Alle Stroken Van Die Avond',
+    booth_text:'Alle foto\u2019s uit het fotohokje, om te bekijken en te downloaden.',
+    booth_btn:'BEKIJK FOTO\u2019S',
+    upload_lbl:'Jullie Eigen Foto\u2019s', upload_main:'Deel Wat Jij Hebt Vastgelegd',
+    upload_text:'Heb je foto\u2019s of video\u2019s gemaakt? Zet ze hier neer. We willen de dag ook graag door jullie ogen zien.',
+    upload_btn:'UPLOAD FOTO\u2019S',
+    pending:'De offici\u00eble foto\u2019s van de fotograaf worden nog bewerkt. Zodra we ze hebben, komen ze op deze pagina te staan.',
+    cap_invite:'De uitnodiging waar het mee begon.',
+    cap_program:'Deze kinderen gaan trouwen.',
+    cap_signing:'Tekenen, en man en vrouw worden.',
+    cap_toast:'De eerste toast van de avond.',
+    cap_cake:'Twee kleine gezichtjes op de taart.',
+    cap_wishes1:'Het wensenbord, dat steeds voller werd.',
+    cap_wishes2:'Vier talen, \u00e9\u00e9n bord.',
+    cap_wishes3:'Briefjes die we nog steeds aan het lezen zijn.'
+  },
+  it: {
+    lang_label:'Lingua', and_word:'e', month:'agosto', scroll:'scorri',
+    hero_eyebrow:'Il 29 agosto 2026 ci siamo sposati',
+    hero_line:'Grazie di esserci stati.',
+    letter_eyebrow:'Dal Nostro Cuore', letter_heading:'Grazie',
+    letter_p1:'Ci siamo sposati davanti alle persone che ci hanno resi quello che siamo. Siete venuti da lontano, vi siete vestiti a festa, avete parlato, avete piegato gru di carta, avete ballato fino all\u2019una di notte e avete riempito un\u2019intera bacheca di auguri che stiamo ancora leggendo.',
+    letter_p2:'\u00c8 stato tutto quello che speravamo, e molto pi\u00f9 rumoroso. Grazie per i discorsi e i brindisi, per le lacrime durante la cerimonia, per essere rimasti in pista e per averci regalato una giornata che racconteremo per tutta la vita.',
+    letter_p3:'Su questa pagina troverete le foto. Tornate quando volete rivivere quel momento.',
+    gallery_eyebrow:'La Giornata', gallery_heading:'Qualche Momento',
+    gallery_note:'Tocca una foto per aprirla a schermo intero, poi tocca di nuovo per ingrandire.',
+    photos_eyebrow:'Le Foto', photos_heading:'Guardate Con Noi',
+    booth_lbl:'Photo Booth', booth_main:'Tutte Le Strisce Della Serata',
+    booth_text:'Tutte le foto scattate nella cabina, da guardare e scaricare.',
+    booth_btn:'APRI LA GALLERIA',
+    upload_lbl:'Le Vostre Foto', upload_main:'Condividete I Vostri Scatti',
+    upload_text:'Avete fatto foto o video? Caricateli qui. Vogliamo vedere quel giorno anche con i vostri occhi.',
+    upload_btn:'CARICA LE FOTO',
+    pending:'Le foto ufficiali del fotografo sono ancora in lavorazione. Appena le riceveremo, le troverete su questa pagina.',
+    cap_invite:'L\u2019invito da cui \u00e8 partito tutto.',
+    cap_program:'Questi bambini si sposano.',
+    cap_signing:'La firma, e poi marito e moglie.',
+    cap_toast:'Il primo brindisi della serata.',
+    cap_cake:'Due faccine sopra la torta.',
+    cap_wishes1:'La bacheca degli auguri, sempre pi\u00f9 piena.',
+    cap_wishes2:'Quattro lingue, una bacheca.',
+    cap_wishes3:'Biglietti che stiamo ancora leggendo.'
+  },
+  vi: {
+    lang_label:'Ngôn ngữ', and_word:'và', month:'tháng 8', scroll:'cuộn xuống',
+    hero_eyebrow:'Ngày 29 tháng 8 năm 2026, chúng con đã kết hôn',
+    hero_line:'Cảm ơn mọi người đã có mặt.',
+    letter_eyebrow:'Từ tận đáy lòng', letter_heading:'Lời Tri Ân',
+    letter_p1:'Chúng con đã kết hôn trước những người đã làm nên con người chúng con hôm nay. Mọi người đã không ngại đường xá xa xôi để đến, đã diện thật đẹp, đã phát biểu, đã gấp hạc giấy, đã nhảy đến một giờ sáng và đã viết kín cả một tấm bảng lời chúc mà chúng con vẫn đang đọc.',
+    letter_p2:'Mọi thứ đúng như chúng con mong đợi, và còn rộn ràng hơn thế. Cảm ơn vì những lời phát biểu và những ly rượu mừng, vì những giọt nước mắt trong buổi lễ, vì đã ở lại sàn nhảy, và vì đã cho chúng con một ngày mà chúng con sẽ kể lại suốt đời.',
+    letter_p3:'Tất cả hình ảnh sẽ được lưu trên trang này. Mọi người hãy quay lại bất cứ lúc nào muốn sống lại ngày hôm đó.',
+    gallery_eyebrow:'Ngày Trọng Đại', gallery_heading:'Vài Khoảnh Khắc',
+    gallery_note:'Chạm vào ảnh để xem toàn màn hình, chạm lần nữa để phóng to.',
+    photos_eyebrow:'Hình Ảnh', photos_heading:'Cùng Nhìn Lại',
+    booth_lbl:'Photo Booth', booth_main:'Tất Cả Ảnh Trong Đêm',
+    booth_text:'Toàn bộ ảnh chụp trong buồng ảnh, có thể xem và tải về.',
+    booth_btn:'XEM ẢNH',
+    upload_lbl:'Ảnh Của Mọi Người', upload_main:'Chia Sẻ Ảnh Bạn Đã Chụp',
+    upload_text:'Mọi người có chụp ảnh hay quay video không? Hãy tải lên đây. Chúng con muốn nhìn lại ngày hôm đó qua mắt mọi người.',
+    upload_btn:'TẢI ẢNH LÊN',
+    pending:'Ảnh chính thức của nhiếp ảnh gia vẫn đang được chỉnh sửa. Chúng con sẽ đăng lên trang này ngay khi nhận được.',
+    cap_invite:'Tấm thiệp mời khởi đầu tất cả.',
+    cap_program:'Hai đứa trẻ này sắp cưới nhau.',
+    cap_signing:'Ký tên, và trở thành vợ chồng.',
+    cap_toast:'Ly rượu mừng đầu tiên của buổi tối.',
+    cap_cake:'Hai gương mặt nhỏ trên chiếc bánh cưới.',
+    cap_wishes1:'Bảng lời chúc, mỗi lúc một đầy thêm.',
+    cap_wishes2:'Bốn thứ tiếng, một tấm bảng.',
+    cap_wishes3:'Những lời nhắn chúng con vẫn đang đọc.'
+  }
+};
+
+let lang = 'en';
+
+function setLang(code, btn) {
+  if (!T[code]) return;
+  lang = code;
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    const isActive = b.textContent.trim().toLowerCase() === code;
+    b.classList.toggle('active', isActive);
+    b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+  });
+  if (btn) btn.classList.add('active');
+  document.documentElement.lang = code;
+  try { localStorage.setItem('weddingLang', code); } catch (_) {}
+  apply(code);
+}
+
+function _detectLang() {
+  try {
+    const saved = localStorage.getItem('weddingLang');
+    if (saved && T[saved]) return saved;
+  } catch (_) {}
+  const nav = (navigator.language || 'en').toLowerCase().slice(0, 2);
+  return T[nav] ? nav : 'en';
+}
+
+function apply(code) {
+  const t = T[code]; if (!t) return;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    if (t[k] !== undefined) el.innerHTML = t[k];
+  });
+  const lb = document.getElementById('letter-body');
+  if (lb) lb.innerHTML = '<p>' + t.letter_p1 + '</p><p>' + t.letter_p2 + '</p><p>' + t.letter_p3 + '</p>';
+  document.querySelectorAll('[data-cap]').forEach(el => {
+    el.textContent = t[el.getAttribute('data-cap')];
+  });
+  const cap = document.getElementById('lbCap');
+  if (document.getElementById('lb').classList.contains('open')) {
+    cap.textContent = t[PHOTOS[lbIndex].key];
+  }
+  document.title = 'Thank you — Giamo & Kim Uyên — 29 ' + t.month + ' 2026';
+}
+
+/* ── THEME ────────────────────────────── */
+function toggleTheme() {
+  const html = document.documentElement;
+  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  document.getElementById('theme-btn').textContent = next === 'dark' ? '☽' : '☀';
+  try { localStorage.setItem('thanksTheme', next); } catch (_) {}
+}
+if (document.documentElement.getAttribute('data-theme') === 'dark') {
+  document.getElementById('theme-btn').textContent = '☽';
+}
+
+/* ── CAROUSEL ─────────────────────────── */
+const track = document.getElementById('track');
+const dots  = document.getElementById('dots');
+
+PHOTOS.forEach((p, i) => {
+  const btn = document.createElement('button');
+  btn.className = 'slide';
+  btn.dataset.index = i;
+  btn.innerHTML =
+    '<span class="slide-frame">' +
+      '<img src="./assets/' + p.file + '-thumb.jpg" alt="" loading="' + (i < 2 ? 'eager' : 'lazy') + '">' +
+      '<span class="zoomtag">ZOOM</span>' +
+    '</span>' +
+    '<span class="slide-cap" data-cap="' + p.key + '"></span>';
+  btn.addEventListener('click', () => openLightbox(i));
+  track.appendChild(btn);
+
+  const d = document.createElement('button');
+  d.className = 'dot';
+  d.setAttribute('aria-label', 'Photo ' + (i + 1));
+  d.addEventListener('click', () => scrollToSlide(i));
+  dots.appendChild(d);
+});
+
+const slides = [...track.querySelectorAll('.slide')];
+const dotEls = [...dots.querySelectorAll('.dot')];
+let current = 0;
+
+function setCurrent(i) {
+  current = i;
+  dotEls.forEach((d, n) => d.setAttribute('aria-current', n === i ? 'true' : 'false'));
+}
+function scrollToSlide(i) {
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  slides[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+  setCurrent(i);
+}
+document.getElementById('prev').addEventListener('click', () => scrollToSlide(current - 1));
+document.getElementById('next').addEventListener('click', () => scrollToSlide(current + 1));
+
+let scrollTimer;
+function syncCurrent() {
+  const mid = track.scrollLeft + track.clientWidth / 2;
+  let best = 0, bestDist = Infinity;
+  slides.forEach((s, i) => {
+    const c = s.offsetLeft + s.offsetWidth / 2;
+    const d = Math.abs(c - mid);
+    if (d < bestDist) { bestDist = d; best = i; }
+  });
+  setCurrent(best);
+}
+track.addEventListener('scroll', () => {
+  clearTimeout(scrollTimer);
+  scrollTimer = setTimeout(syncCurrent, 90);
+}, { passive: true });
+track.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight') { e.preventDefault(); scrollToSlide(current + 1); }
+  if (e.key === 'ArrowLeft')  { e.preventDefault(); scrollToSlide(current - 1); }
+});
+setCurrent(0);
+window.addEventListener('load', syncCurrent);
+
+/* ── VIEWER ───────────────────────────── */
+const lb     = document.getElementById('lb');
+const lbImg  = document.getElementById('lbImg');
+const lbCap  = document.getElementById('lbCap');
+const stage  = document.getElementById('lbStage');
+let lbIndex = 0, scale = 1, tx = 0, ty = 0, dragging = false, sx = 0, sy = 0, lastFocus = null;
+
+function applyTransform() {
+  lbImg.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+  stage.classList.toggle('zoomed', scale > 1);
+}
+function resetZoom() { scale = 1; tx = 0; ty = 0; applyTransform(); }
+
+function showPhoto(i) {
+  lbIndex = (i + PHOTOS.length) % PHOTOS.length;
+  const p = PHOTOS[lbIndex];
+  lbImg.src = './assets/' + p.file + '.jpg';
+  lbCap.textContent = T[lang][p.key];
+  lbImg.alt = T[lang][p.key];
+  resetZoom();
+}
+function openLightbox(i) {
+  lastFocus = document.activeElement;
+  showPhoto(i);
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('lbClose').focus();
+}
+function closeLightbox() {
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+  resetZoom();
+  if (lastFocus) lastFocus.focus();
+}
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+document.getElementById('lbPrev').addEventListener('click', () => showPhoto(lbIndex - 1));
+document.getElementById('lbNext').addEventListener('click', () => showPhoto(lbIndex + 1));
+lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape')     closeLightbox();
+  if (e.key === 'ArrowRight') showPhoto(lbIndex + 1);
+  if (e.key === 'ArrowLeft')  showPhoto(lbIndex - 1);
+  if (e.key === '+' || e.key === '=') { scale = Math.min(5, scale + 0.5); applyTransform(); }
+  if (e.key === '-') { scale = Math.max(1, scale - 0.5); if (scale === 1) { tx = 0; ty = 0; } applyTransform(); }
+});
+
+stage.addEventListener('wheel', e => {
+  e.preventDefault();
+  scale = Math.min(5, Math.max(1, scale + (e.deltaY < 0 ? 0.3 : -0.3)));
+  if (scale === 1) { tx = 0; ty = 0; }
+  applyTransform();
+}, { passive: false });
+
+let downX = 0, downY = 0, moved = false;
+stage.addEventListener('pointerdown', e => {
+  downX = e.clientX; downY = e.clientY; moved = false;
+  if (scale > 1) {
+    dragging = true; sx = e.clientX - tx; sy = e.clientY - ty;
+    stage.classList.add('dragging'); stage.setPointerCapture(e.pointerId);
+  }
+});
+stage.addEventListener('pointermove', e => {
+  if (!dragging) return;
+  tx = e.clientX - sx; ty = e.clientY - sy; moved = true; applyTransform();
+});
+stage.addEventListener('pointerup', e => {
+  dragging = false; stage.classList.remove('dragging');
+  if (Math.abs(e.clientX - downX) > 8 || Math.abs(e.clientY - downY) > 8) moved = true;
+  if (moved) return;
+  if (scale === 1) {
+    const r = lbImg.getBoundingClientRect();
+    scale = 2.4;
+    tx = (r.left + r.width / 2 - e.clientX) * (scale - 1);
+    ty = (r.top + r.height / 2 - e.clientY) * (scale - 1);
+  } else {
+    scale = 1; tx = 0; ty = 0;
+  }
+  applyTransform();
+});
+
+let tStartX = 0;
+stage.addEventListener('touchstart', e => { tStartX = e.touches[0].clientX; }, { passive: true });
+stage.addEventListener('touchend', e => {
+  if (scale > 1) return;
+  const dx = e.changedTouches[0].clientX - tStartX;
+  if (Math.abs(dx) > 60) showPhoto(lbIndex + (dx < 0 ? 1 : -1));
+}, { passive: true });
+
+setLang(_detectLang());
+
+/* ── PETALS ───────────────────────────── */
+(function () {
+  var layer = document.getElementById('petals-layer');
+  var COUNT = 18;
+  var css = '';
+  for (var i = 0; i < COUNT; i++) {
+    var size = 9 + Math.random() * 8;
+    var left = Math.random() * 100;
+    var duration = 8 + Math.random() * 10;
+    var delay = -(Math.random() * duration);
+    var rot = Math.floor(Math.random() * 360);
+    var name = 'pf' + i;
+    var s = 12 + Math.random() * 16;
+    var ph = Math.random() < 0.5 ? 1 : -1;
+    var x1 = Math.round(ph * s), x2 = Math.round(-ph * s * 0.6),
+        x3 = Math.round(ph * s * 0.85), x4 = Math.round(-ph * s * 0.4);
+
+    var p = document.createElement('div');
+    p.className = 'petal';
+    p.style.width = size.toFixed(1) + 'px';
+    p.style.height = (size * 1.15).toFixed(1) + 'px';
+    p.style.left = left.toFixed(1) + 'vw';
+    p.style.animationName = name;
+    p.style.animationDuration = duration.toFixed(1) + 's';
+    p.style.animationDelay = delay.toFixed(1) + 's';
+    layer.appendChild(p);
+
+    css += '@keyframes ' + name + '{' +
+      '0%  {transform:translateY(0)     rotate(' + rot + 'deg) translateX(0); opacity:0;}' +
+      '8%  {opacity:0.85;}' +
+      '25% {transform:translateY(25vh)  rotate(' + (rot + 135) + 'deg) translateX(' + x1 + 'px);}' +
+      '50% {transform:translateY(52vh)  rotate(' + (rot + 270) + 'deg) translateX(' + x2 + 'px);}' +
+      '75% {transform:translateY(78vh)  rotate(' + (rot + 405) + 'deg) translateX(' + x3 + 'px);}' +
+      '88% {opacity:0.7;}' +
+      '100%{transform:translateY(110vh) rotate(' + (rot + 540) + 'deg) translateX(' + x4 + 'px); opacity:0;}' +
+      '}';
+  }
+  var style = document.createElement('style');
+  style.textContent = css;
+  document.head.appendChild(style);
+})();
+
+/* ── MUSIC ────────────────────────────── */
+(function () {
+  var audio = document.getElementById('bg-music');
+  var btn = document.getElementById('music-btn');
+  var playing = false;
+
+  function reflectOn()  { btn.classList.add('playing');    btn.textContent = '♫'; }
+  function reflectOff() { btn.classList.remove('playing'); btn.textContent = '♪'; }
+
+  var TARGET_VOLUME = 0.55;
+
+  function fadeIn() {
+    audio.volume = 0;
+    var step = 0;
+    var timer = setInterval(function () {
+      step += 1;
+      var v = Math.min(TARGET_VOLUME, (step / 25) * TARGET_VOLUME);
+      audio.volume = v;
+      if (v >= TARGET_VOLUME) clearInterval(timer);
+    }, 60);
+  }
+
+  function startMusic() {
+    audio.play().then(function () { playing = true; reflectOn(); fadeIn(); }).catch(function () {});
+  }
+
+  window.toggleMusic = function () {
+    if (playing) { playing = false; audio.pause(); reflectOff(); }
+    else { startMusic(); }
+  };
+
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) { if (!audio.paused) audio.pause(); }
+    else if (playing) { audio.play().catch(function () {}); }
+  });
+
+  audio.play().then(function () {
+    playing = true; reflectOn(); fadeIn();
+  }).catch(function () {
+    var events = ['click', 'keydown', 'touchstart'];
+    function onInteract() {
+      startMusic();
+      events.forEach(function (ev) { document.removeEventListener(ev, onInteract); });
+    }
+    events.forEach(function (ev) { document.addEventListener(ev, onInteract, { once: true, passive: true }); });
+  });
+})();
+</script>
+</body>
+</html>
