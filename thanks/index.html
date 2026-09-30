@@ -96,12 +96,27 @@ body {
   background: color-mix(in srgb, var(--bg) 92%, transparent);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
-  display: flex; justify-content: flex-end; align-items: center;
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
   gap: 6px; padding: 10px 20px;
 }
+.lang-bar-right { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
 .lang-bar-label {
   font-family: 'Cinzel', serif; font-size: 9px;
   letter-spacing: 0.3em; color: var(--gold-dim); margin-right: 4px;
+}
+
+/* ── BRAND NAV (logo + Home/Thanks) ─────── */
+.brand-nav { display: flex; align-items: center; gap: 12px; }
+.brand-logo { height: 30px; width: auto; display: block; user-select: none; -webkit-user-drag: none; }
+.brand-link {
+  font-family: 'Cinzel', serif; font-size: 10px; font-weight: 500;
+  letter-spacing: 0.12em; color: var(--gold-dim); text-decoration: none;
+  border: 1px solid var(--border); padding: 5px 13px; cursor: pointer; transition: all 0.22s;
+}
+.brand-link:hover, .brand-link.active { background: var(--border); color: var(--text-bright); }
+@media (max-width: 640px) {
+  .brand-nav { order: -1; flex-basis: 100%; justify-content: center; margin-bottom: 4px; }
+  .lang-bar-right { flex-basis: 100%; justify-content: center; }
 }
 .lang-btn, .theme-btn, .music-btn {
   background: transparent; border: 1px solid var(--border); color: var(--gold-dim);
@@ -392,13 +407,20 @@ footer { text-align: center; padding: 56px 24px 48px; border-top: 1px solid var(
 <body>
 
 <nav class="lang-bar">
-  <span class="lang-bar-label" data-i18n="lang_label">Language</span>
-  <button class="lang-btn active" onclick="setLang('en',this)">EN</button>
-  <button class="lang-btn"        onclick="setLang('nl',this)">NL</button>
-  <button class="lang-btn"        onclick="setLang('it',this)">IT</button>
-  <button class="lang-btn"        onclick="setLang('vi',this)">VI</button>
-  <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle light / dark">☀</button>
-  <button class="music-btn" id="music-btn" onclick="toggleMusic()" title="Toggle music">♪</button>
+  <div class="brand-nav">
+    <img class="brand-logo" id="brand-logo" src="../logo.png" alt="The Van den Eerenbeemts">
+    <a class="brand-link" href="../index.html" data-i18n="nav_home">Home</a>
+    <a class="brand-link" href="./index.html" data-i18n="nav_thanks">Thanks</a>
+  </div>
+  <div class="lang-bar-right">
+    <span class="lang-bar-label" data-i18n="lang_label">Language</span>
+    <button class="lang-btn active" onclick="setLang('en',this)">EN</button>
+    <button class="lang-btn"        onclick="setLang('nl',this)">NL</button>
+    <button class="lang-btn"        onclick="setLang('it',this)">IT</button>
+    <button class="lang-btn"        onclick="setLang('vi',this)">VI</button>
+    <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle light / dark">☀</button>
+    <button class="music-btn" id="music-btn" onclick="toggleMusic()" title="Toggle music">♪</button>
+  </div>
 </nav>
 
 <audio id="bg-music" loop preload="none">
@@ -539,7 +561,7 @@ const PHOTOS = [
 /* ── TRANSLATIONS ─────────────────────── */
 const T = {
   en: {
-    lang_label:'Language', and_word:'and', month:'august', scroll:'scroll',
+    lang_label:'Language', nav_home:'Home', nav_thanks:'Thanks', and_word:'and', month:'august', scroll:'scroll',
     hero_eyebrow:'On 29 august 2026 we married',
     hero_line:'Thank you for being there.',
     letter_eyebrow:'From Our Hearts', letter_heading:'Thank You',
@@ -566,7 +588,7 @@ const T = {
     cap_wishes3:'We love you all.'
   },
   nl: {
-    lang_label:'Taal', and_word:'en', month:'augustus', scroll:'scroll',
+    lang_label:'Taal', nav_home:'Home', nav_thanks:'Bedankt', and_word:'en', month:'augustus', scroll:'scroll',
     hero_eyebrow:'Op 29 augustus 2026 zijn wij getrouwd',
     hero_line:'Bedankt dat jullie erbij waren.',
     letter_eyebrow:'Van Harte', letter_heading:'Dank Jullie Wel',
@@ -593,7 +615,7 @@ const T = {
     cap_wishes3:'We houden van jullie.'
   },
   it: {
-    lang_label:'Lingua', and_word:'e', month:'agosto', scroll:'scorri',
+    lang_label:'Lingua', nav_home:'Home', nav_thanks:'Grazie', and_word:'e', month:'agosto', scroll:'scorri',
     hero_eyebrow:'Il 29 agosto 2026 ci siamo sposati',
     hero_line:'Grazie di esserci stati.',
     letter_eyebrow:'Dal Profondo del Cuore', letter_heading:'Grazie',
@@ -620,7 +642,7 @@ const T = {
     cap_wishes3:'Vi vogliamo bene.'
   },
   vi: {
-    lang_label:'Ngôn ngữ', and_word:'và', month:'tháng 8', scroll:'cuộn xuống',
+    lang_label:'Ngôn ngữ', nav_home:'Trang chủ', nav_thanks:'Cảm ơn', and_word:'và', month:'tháng 8', scroll:'cuộn xuống',
     hero_eyebrow:'Ngày 29 tháng 8 năm 2026, chúng con đã kết hôn',
     hero_line:'Cảm ơn mọi người đã có mặt.',
     letter_eyebrow:'Từ tận đáy lòng', letter_heading:'Lời Tri Ân',
@@ -944,6 +966,21 @@ setLang(_detectLang());
       events.forEach(function (ev) { document.removeEventListener(ev, onInteract); });
     }
     events.forEach(function (ev) { document.addEventListener(ev, onInteract, { once: true, passive: true }); });
+  });
+})();
+
+/* ── SECRET: triple-tap/click the logo opens the gallery ─── */
+(function () {
+  var logo = document.getElementById('brand-logo');
+  if (!logo) return;
+  var taps = [];
+  logo.addEventListener('click', function () {
+    var now = Date.now();
+    taps = taps.filter(function (t) { return now - t < 700; });
+    taps.push(now);
+    if (taps.length >= 3) {
+      window.location.href = '../gallery/index.html';
+    }
   });
 })();
 </script>

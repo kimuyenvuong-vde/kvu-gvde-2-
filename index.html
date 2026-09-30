@@ -97,10 +97,52 @@
       -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
       display: flex;
-      justify-content: flex-end;
+      flex-wrap: wrap;
+      justify-content: space-between;
       align-items: center;
       gap: 6px;
       padding: 10px 20px;
+    }
+    .lang-bar-right {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    /* ── BRAND NAV (logo + Home/Thanks) ─────── */
+    .brand-nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-logo {
+      height: 30px;
+      width: auto;
+      display: block;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+    .brand-link {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      color: var(--gold-dim);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 5px 13px;
+      cursor: pointer;
+      transition: all 0.22s;
+    }
+    .brand-link:hover, .brand-link.active {
+      background: var(--border);
+      color: var(--text-bright);
+    }
+    @media (max-width: 640px) {
+      .brand-nav { order: -1; flex-basis: 100%; justify-content: center; margin-bottom: 4px; }
+      .lang-bar-right { flex-basis: 100%; justify-content: center; }
     }
 
     .lang-bar-label {
@@ -835,13 +877,20 @@
 
   <!-- ══ TOP BAR ══════════════════════════════ -->
   <nav class="lang-bar">
-    <span class="lang-bar-label" data-i18n="lang_label">Language</span>
-    <button class="lang-btn active" onclick="setLang('en',this)">EN</button>
-    <button class="lang-btn"        onclick="setLang('nl',this)">NL</button>
-    <button class="lang-btn"        onclick="setLang('it',this)">IT</button>
-    <button class="lang-btn"        onclick="setLang('vi',this)">VI</button>
-    <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle light / dark">☀</button>
-    <button class="music-btn" id="music-btn" onclick="toggleMusic()" title="Toggle music">♪</button>
+    <div class="brand-nav">
+      <img class="brand-logo" id="brand-logo" src="./logo.png" alt="The Van den Eerenbeemts">
+      <a class="brand-link" href="./index.html" data-i18n="nav_home">Home</a>
+      <a class="brand-link" href="./thanks/index.html" data-i18n="nav_thanks">Thanks</a>
+    </div>
+    <div class="lang-bar-right">
+      <span class="lang-bar-label" data-i18n="lang_label">Language</span>
+      <button class="lang-btn active" onclick="setLang('en',this)">EN</button>
+      <button class="lang-btn"        onclick="setLang('nl',this)">NL</button>
+      <button class="lang-btn"        onclick="setLang('it',this)">IT</button>
+      <button class="lang-btn"        onclick="setLang('vi',this)">VI</button>
+      <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle light / dark">☀</button>
+      <button class="music-btn" id="music-btn" onclick="toggleMusic()" title="Toggle music">♪</button>
+    </div>
   </nav>
 
   <!-- ══ AUDIO ════════════════════════════════ -->
@@ -1077,7 +1126,7 @@
     /* ── TRANSLATIONS ─────────────────────── */
     const T = {
       en: {
-        lang_label:'Language', hero_eyebrow:'You are invited to the wedding of',
+        lang_label:'Language', nav_home:'Home', nav_thanks:'Thanks', hero_eyebrow:'You are invited to the wedding of',
         and_word:'and', date_ord:'th',
         alert_error:'Something went wrong sending your RSVP. Please check your internet connection and try again — or contact us directly if it keeps failing.',
         month:'august', netherlands:'Netherlands',
@@ -1099,7 +1148,7 @@
         contact_eyebrow:'Questions?', contact_heading:'Get in Touch',
       },
       nl: {
-        lang_label:'Taal', hero_eyebrow:'Je bent uitgenodigd voor de bruiloft van',
+        lang_label:'Taal', nav_home:'Home', nav_thanks:'Bedankt', hero_eyebrow:'Je bent uitgenodigd voor de bruiloft van',
         and_word:'en', date_ord:'',
         alert_error:'Er ging iets mis bij het versturen van je RSVP. Controleer je internetverbinding en probeer het opnieuw — of neem rechtstreeks contact met ons op als het blijft mislukken.',
         month:'augustus', netherlands:'Nederland',
@@ -1121,7 +1170,7 @@
         contact_eyebrow:'Vragen?', contact_heading:'Neem contact op',
       },
       it: {
-        lang_label:'Lingua', hero_eyebrow:'Sei invitato al matrimonio di',
+        lang_label:'Lingua', nav_home:'Home', nav_thanks:'Grazie', hero_eyebrow:'Sei invitato al matrimonio di',
         and_word:'e', date_ord:'',
         alert_error:"Qualcosa è andato storto nell'invio del tuo RSVP. Controlla la connessione internet e riprova — oppure contattaci direttamente se il problema persiste.",
         month:'agosto', netherlands:'Paesi Bassi',
@@ -1143,7 +1192,7 @@
         contact_eyebrow:'Domande?', contact_heading:'Contattaci',
       },
       vi: {
-        lang_label:'Ngôn ngữ', hero_eyebrow:'Trân trọng kính mời bạn chung vui lễ cưới của',
+        lang_label:'Ngôn ngữ', nav_home:'Trang chủ', nav_thanks:'Cảm ơn', hero_eyebrow:'Trân trọng kính mời bạn chung vui lễ cưới của',
         and_word:'và', date_ord:'',
         alert_error:'Đã xảy ra lỗi khi gửi xác nhận của bạn. Vui lòng kiểm tra kết nối internet và thử lại — hoặc liên hệ trực tiếp với tụi mình nếu vẫn không gửi được.',
         month:'tháng 8', netherlands:'Hà Lan',
@@ -1425,6 +1474,21 @@
           events.forEach(function (ev) { document.removeEventListener(ev, onInteract); });
         }
         events.forEach(function (ev) { document.addEventListener(ev, onInteract, { once: true, passive: true }); });
+      });
+    })();
+
+    /* ── SECRET: triple-tap/click the logo opens the gallery ─── */
+    (function () {
+      var logo = document.getElementById('brand-logo');
+      if (!logo) return;
+      var taps = [];
+      logo.addEventListener('click', function () {
+        var now = Date.now();
+        taps = taps.filter(function (t) { return now - t < 700; });
+        taps.push(now);
+        if (taps.length >= 3) {
+          window.location.href = './gallery/index.html';
+        }
       });
     })();
   </script>

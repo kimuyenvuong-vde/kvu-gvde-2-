@@ -85,6 +85,7 @@
       justify-content: space-between;
       gap: 12px;
     }
+    .top-bar-links { display: flex; gap: 10px; }
     .back-link {
       font-family: 'Cinzel', serif;
       font-size: 10px;
@@ -323,7 +324,10 @@
 <body>
 
   <nav class="top-bar">
-    <a class="back-link" href="../index.html">← Home</a>
+    <div class="top-bar-links">
+      <a class="back-link" href="../index.html">← Home</a>
+      <a class="back-link" href="../videos/index.html">Videos</a>
+    </div>
     <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle light / dark">☀</button>
   </nav>
 
@@ -336,7 +340,7 @@
   <div class="controls">
     <div class="filter-row" id="filter-row"></div>
     <div class="sort-row">
-      <div class="chip active" data-sort="beauty" onclick="setSort('beauty', this)">✦ Most Beautiful</div>
+      <div class="chip active" data-sort="beauty" onclick="setSort('beauty', this)">✦ Giamo's Favorites</div>
       <div class="chip" data-sort="chrono" onclick="setSort('chrono', this)">Chronological</div>
     </div>
     <p class="count-label" id="count-label"></p>

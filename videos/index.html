@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honeymoon Videos — Giamo &amp; Kim Uyên</title>
+  <meta name="google" content="notranslate">
+
+  <script>
+    (function () {
+      var saved;
+      try { saved = localStorage.getItem('weddingTheme'); } catch (_) {}
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = (saved === 'dark' || (saved !== 'light' && prefersDark)) ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root, [data-theme="dark"] {
+      --bg:           #070706;
+      --bg2:          #0D0C0A;
+      --gold:         #D4A84A;
+      --gold-bright:  #F0C85A;
+      --gold-pale:    #F8DF90;
+      --gold-dim:     #A07830;
+      --gold-dark:    #6A5018;
+      --text:         #E8C060;
+      --text-bright:  #F8D878;
+      --text-dim:     #B89040;
+      --text-body:    #D4A848;
+      --border:       #6A5018;
+      --card-bg:      #0D0C0A;
+      --overlay-bg:   rgba(4,4,3,0.94);
+      --chip-bg:      #0D0C0A;
+    }
+
+    [data-theme="light"] {
+      --bg:           #F8F2E4;
+      --bg2:          #F0E8D0;
+      --gold:         #7A5010;
+      --gold-bright:  #9A6818;
+      --gold-pale:    #B88828;
+      --gold-dim:     #5A3C0A;
+      --gold-dark:    #C8A048;
+      --text:         #2C1810;
+      --text-bright:  #1A0E08;
+      --text-dim:     #5C3A20;
+      --text-body:    #3C2810;
+      --border:       #C8A048;
+      --card-bg:      #F8F2E4;
+      --overlay-bg:   rgba(20,14,8,0.94);
+      --chip-bg:      #F0E8D0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'EB Garamond', serif;
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.6;
+      transition: background 0.35s, color 0.35s;
+      min-height: 100vh;
+    }
+
+    /* ── TOP BAR ─────────────────────────── */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .top-bar-links { display: flex; gap: 10px; }
+    .back-link {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      color: var(--gold-dim);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .back-link:hover { background: var(--border); color: var(--text-bright); }
+    .theme-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--gold-dim);
+      width: 34px; height: 34px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .theme-btn:hover { background: var(--border); color: var(--text-bright); }
+
+    /* ── HEADER ──────────────────────────── */
+    .gallery-header {
+      text-align: center;
+      padding: 64px 24px 40px;
+    }
+    .gh-eyebrow {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.4em;
+      color: var(--gold-dim);
+      margin-bottom: 18px;
+    }
+    .gh-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(28px, 6vw, 54px);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      background: linear-gradient(175deg, var(--gold-pale) 0%, var(--gold) 55%, var(--gold-dim) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    [data-theme="light"] .gh-title { -webkit-text-fill-color: var(--gold); background: none; }
+    .gh-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(16px, 2.4vw, 22px);
+      color: var(--gold-dim);
+      margin-top: 14px;
+    }
+
+    /* ── CONTROLS ────────────────────────── */
+    .controls {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+    }
+    .filter-row, .sort-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .chip {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      color: var(--gold-dim);
+      background: var(--chip-bg);
+      border: 1.5px solid var(--border);
+      padding: 9px 18px;
+      cursor: pointer;
+      transition: all 0.2s;
+      user-select: none;
+    }
+    .chip:hover { border-color: var(--gold); color: var(--text-bright); }
+    .chip.active {
+      background: var(--gold-dim);
+      color: var(--bg);
+      border-color: var(--gold-dim);
+    }
+    [data-theme="light"] .chip.active { color: #F8F2E4; }
+    .sort-row .chip.active { background: transparent; color: var(--text-bright); border-color: var(--gold); }
+
+    .count-label {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      color: var(--gold-dark);
+      text-align: center;
+    }
+
+    /* ── GRID ────────────────────────────── */
+    .grid-wrap { max-width: 1400px; margin: 0 auto; padding: 0 16px 100px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 6px;
+    }
+    .tile {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--card-bg);
+      border: 1px solid transparent;
+    }
+    .tile img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease, opacity 0.3s ease;
+      opacity: 0;
+    }
+    .tile img.loaded { opacity: 1; }
+    .tile:hover img { transform: scale(1.06); }
+    .tile .play-badge {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.55);
+      display: flex; align-items: center; justify-content: center;
+      pointer-events: none;
+    }
+    .tile .play-badge::after {
+      content: '';
+      border-style: solid;
+      border-width: 10px 0 10px 16px;
+      border-color: transparent transparent transparent #fff;
+      margin-left: 3px;
+    }
+    .tile .dur-badge {
+      position: absolute;
+      bottom: 6px; right: 6px;
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      color: #fff;
+      background: rgba(0,0,0,0.6);
+      padding: 3px 7px;
+      pointer-events: none;
+    }
+    .tile .rank-badge {
+      position: absolute;
+      top: 6px; left: 6px;
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      color: var(--gold-pale);
+      background: rgba(0,0,0,0.55);
+      padding: 3px 7px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .sort-beauty .tile .rank-badge { opacity: 1; }
+    .tile.hidden { display: none; }
+    .empty-msg {
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--gold-dim);
+      padding: 80px 24px;
+      display: none;
+    }
+    .empty-msg.show { display: block; }
+
+    /* ── LIGHTBOX ────────────────────────── */
+    .lightbox {
+      position: fixed; inset: 0;
+      background: var(--overlay-bg);
+      z-index: 300;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+    .lightbox.open { display: flex; }
+    .lb-media-wrap {
+      max-width: 92vw; max-height: 72vh;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .lb-media-wrap video {
+      max-width: 92vw; max-height: 72vh;
+      object-fit: contain;
+      background: #000;
+    }
+    .lb-tags {
+      display: flex; gap: 8px; flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 18px;
+    }
+    .lb-tag {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      color: var(--gold-pale);
+      border: 1px solid var(--gold-dim);
+      padding: 5px 12px;
+    }
+    .lb-close, .lb-prev, .lb-next {
+      position: fixed;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--gold-pale);
+      cursor: pointer;
+      font-size: 20px;
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s;
+    }
+    .lb-close:hover, .lb-prev:hover, .lb-next:hover { background: var(--gold-dim); color: var(--bg); }
+    .lb-close { top: 20px; right: 20px; }
+    .lb-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+    .lb-next { right: 20px; top: 50%; transform: translateY(-50%); }
+    @media (max-width: 640px) {
+      .lb-prev, .lb-next { width: 38px; height: 38px; font-size: 16px; }
+      .lb-prev { left: 8px; }
+      .lb-next { right: 8px; }
+      .lb-close { top: 10px; right: 10px; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 48px 24px;
+      border-top: 1px solid var(--border);
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.24em;
+      color: var(--gold-dim);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-bar">
+    <div class="top-bar-links">
+      <a class="back-link" href="../index.html">← Home</a>
+      <a class="back-link" href="../gallery/index.html">Photos</a>
+    </div>
+    <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle light / dark">☀</button>
+  </nav>
+
+  <header class="gallery-header">
+    <p class="gh-eyebrow">✦ &nbsp; Japan &amp; Vietnam &nbsp; ✦</p>
+    <h1 class="gh-title">Honeymoon Videos</h1>
+    <p class="gh-sub">8 – 26 September</p>
+  </header>
+
+  <div class="controls">
+    <div class="filter-row" id="filter-row"></div>
+    <div class="sort-row">
+      <div class="chip active" data-sort="beauty" onclick="setSort('beauty', this)">✦ Giamo's Favorites</div>
+      <div class="chip" data-sort="chrono" onclick="setSort('chrono', this)">Chronological</div>
+    </div>
+    <p class="count-label" id="count-label"></p>
+  </div>
+
+  <div class="grid-wrap">
+    <div class="grid" id="grid"></div>
+    <p class="empty-msg" id="empty-msg">No clips match this filter — try another.</p>
+  </div>
+
+  <footer>Giamo &amp; Kim Uyên — Honeymoon Videos</footer>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <button class="lb-prev" onclick="navLightbox(-1)">‹</button>
+    <button class="lb-next" onclick="navLightbox(1)">›</button>
+    <div class="lb-media-wrap" id="lb-media-wrap"></div>
+    <div class="lb-tags" id="lb-tags"></div>
+  </div>
+
+  <script>
+    const TAGS = ['Selfies', 'Japan', 'Vietnam', 'Food', 'Together'];
+    let ITEMS = [];
+    let visible = [];
+    let activeTags = new Set();
+    let sortMode = 'beauty';
+    let lbIndex = -1;
+
+    function toggleTheme() {
+      const root = document.documentElement;
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('weddingTheme', next); } catch (_) {}
+      document.getElementById('theme-btn').textContent = next === 'dark' ? '☾' : '☀';
+    }
+    (function initThemeBtn() {
+      document.getElementById('theme-btn').textContent =
+        document.documentElement.getAttribute('data-theme') === 'dark' ? '☾' : '☀';
+    })();
+
+    function fmtDur(s) {
+      s = Math.round(s || 0);
+      const m = Math.floor(s / 60), sec = s % 60;
+      return m > 0 ? `${m}:${String(sec).padStart(2, '0')}` : `${sec}s`;
+    }
+
+    function buildFilterRow() {
+      const row = document.getElementById('filter-row');
+      const allChip = document.createElement('div');
+      allChip.className = 'chip active';
+      allChip.textContent = 'All';
+      allChip.onclick = () => { activeTags.clear(); refreshChips(); applyFilters(); };
+      row.appendChild(allChip);
+      TAGS.forEach(tag => {
+        const chip = document.createElement('div');
+        chip.className = 'chip';
+        chip.textContent = tag;
+        chip.dataset.tag = tag;
+        chip.onclick = () => {
+          if (activeTags.has(tag)) activeTags.delete(tag); else activeTags.add(tag);
+          refreshChips();
+          applyFilters();
+        };
+        row.appendChild(chip);
+      });
+    }
+    function refreshChips() {
+      const row = document.getElementById('filter-row');
+      [...row.children].forEach(chip => {
+        if (!chip.dataset.tag) { chip.classList.toggle('active', activeTags.size === 0); return; }
+        chip.classList.toggle('active', activeTags.has(chip.dataset.tag));
+      });
+    }
+    function setSort(mode, el) {
+      sortMode = mode;
+      document.querySelectorAll('.sort-row .chip').forEach(c => c.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('grid').classList.toggle('sort-beauty', mode === 'beauty');
+      applyFilters();
+    }
+
+    function applyFilters() {
+      let filtered = ITEMS.filter(it => activeTags.size === 0 || it.tags.some(t => activeTags.has(t)));
+      filtered = filtered.slice().sort((a, b) => {
+        if (sortMode === 'beauty') return b.beauty - a.beauty;
+        return a.order - b.order;
+      });
+      visible = filtered;
+      renderGrid();
+      document.getElementById('count-label').textContent =
+        `${filtered.length} of ${ITEMS.length} clips`;
+      document.getElementById('empty-msg').classList.toggle('show', filtered.length === 0);
+    }
+
+    function renderGrid() {
+      const grid = document.getElementById('grid');
+      grid.innerHTML = '';
+      visible.forEach((it, i) => {
+        const tile = document.createElement('div');
+        tile.className = 'tile';
+        tile.onclick = () => openLightbox(i);
+        const img = document.createElement('img');
+        img.loading = 'lazy';
+        img.src = it.poster;
+        img.alt = it.tags.join(', ');
+        img.onload = () => img.classList.add('loaded');
+        tile.appendChild(img);
+        const badge = document.createElement('div');
+        badge.className = 'play-badge';
+        tile.appendChild(badge);
+        const dur = document.createElement('div');
+        dur.className = 'dur-badge';
+        dur.textContent = fmtDur(it.duration);
+        tile.appendChild(dur);
+        if (sortMode === 'beauty') {
+          const rank = document.createElement('div');
+          rank.className = 'rank-badge';
+          rank.textContent = '#' + (i + 1);
+          tile.appendChild(rank);
+        }
+        grid.appendChild(tile);
+      });
+    }
+
+    function openLightbox(i) {
+      lbIndex = i;
+      renderLightbox();
+      document.getElementById('lightbox').classList.add('open');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      const wrap = document.getElementById('lb-media-wrap');
+      wrap.innerHTML = '';
+    }
+    function navLightbox(delta) {
+      lbIndex = (lbIndex + delta + visible.length) % visible.length;
+      renderLightbox();
+    }
+    function renderLightbox() {
+      const it = visible[lbIndex];
+      const wrap = document.getElementById('lb-media-wrap');
+      wrap.innerHTML = '';
+      const v = document.createElement('video');
+      v.src = it.video;
+      v.controls = true;
+      v.autoplay = true;
+      v.playsInline = true;
+      v.preload = 'metadata';
+      wrap.appendChild(v);
+      const tagsEl = document.getElementById('lb-tags');
+      tagsEl.innerHTML = '';
+      it.tags.forEach(t => {
+        const span = document.createElement('span');
+        span.className = 'lb-tag';
+        span.textContent = t;
+        tagsEl.appendChild(span);
+      });
+    }
+    document.addEventListener('keydown', e => {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navLightbox(-1);
+      if (e.key === 'ArrowRight') navLightbox(1);
+    });
+    document.getElementById('lightbox').addEventListener('click', e => {
+      if (e.target.id === 'lightbox') closeLightbox();
+    });
+
+    buildFilterRow();
+    fetch('manifest.json')
+      .then(r => r.json())
+      .then(data => {
+        ITEMS = data.map((it, i) => ({ ...it, order: i }));
+        applyFilters();
+      })
+      .catch(err => {
+        document.getElementById('count-label').textContent = 'Could not load manifest.json — ' + err;
+      });
+  </script>
+</body>
+</html>
