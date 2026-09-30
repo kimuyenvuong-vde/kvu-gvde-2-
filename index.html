@@ -7,6 +7,8 @@
   <meta property="og:title"       content="Giamo & Kim Uyên — 29 August 2026">
   <meta property="og:description" content="Get ready to raise a glass with us — Come hungry, happy, and ready to party!">
   <meta name="google" content="notranslate">
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="icon" href="./favicon.ico" sizes="any">
 
   <!-- Resolve theme before <img> is parsed, so only the matching hero image downloads. -->
   <script>
@@ -101,7 +103,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 6px;
-      padding: 10px 20px;
+      padding: 16px 20px;
     }
     .lang-bar-right {
       display: flex;
@@ -118,11 +120,14 @@
       gap: 12px;
     }
     .brand-logo {
-      height: 30px;
+      height: 88px;
       width: auto;
       display: block;
       user-select: none;
       -webkit-user-drag: none;
+    }
+    @media (max-width: 480px) {
+      .brand-logo { height: 60px; }
     }
     .brand-link {
       font-family: 'Cinzel', serif;
@@ -185,6 +190,20 @@
       justify-content: center;
     }
     .theme-btn { margin-left: 8px; }
+    .now-playing {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 13px;
+      color: var(--gold-dim);
+      margin-left: 6px;
+      max-width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      opacity: 0;
+      transition: max-width 0.4s ease, opacity 0.3s ease;
+    }
+    .now-playing.show { max-width: 220px; opacity: 1; }
+    .now-playing::before { content: '♫ '; }
 
     /* ── HERO ─────────────────────────────── */
     .hero {
@@ -889,6 +908,7 @@
       <button class="lang-btn"        onclick="setLang('it',this)">IT</button>
       <button class="lang-btn"        onclick="setLang('vi',this)">VI</button>
       <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle light / dark">☀</button>
+      <span class="now-playing" id="now-playing"></span>
       <button class="music-btn" id="music-btn" onclick="toggleMusic()" title="Toggle music">♪</button>
     </div>
   </nav>
@@ -1421,6 +1441,8 @@
     (function () {
       var audio = document.getElementById('bg-music');
       var btn   = document.getElementById('music-btn');
+      var nowPlayingEl = document.getElementById('now-playing');
+      var SONG_TITLE = 'Gentle Hands';
       // playing = the user's *intent*: true means "music should be playing".
       // Visibility events pause/resume the audio without flipping this flag.
       var playing = false;
@@ -1428,10 +1450,15 @@
       function reflectOn() {
         btn.classList.add('playing');
         btn.textContent = '♫';
+        if (nowPlayingEl) {
+          nowPlayingEl.textContent = SONG_TITLE;
+          nowPlayingEl.classList.add('show');
+        }
       }
       function reflectOff() {
         btn.classList.remove('playing');
         btn.textContent = '♪';
+        if (nowPlayingEl) nowPlayingEl.classList.remove('show');
       }
 
       function startMusic() {

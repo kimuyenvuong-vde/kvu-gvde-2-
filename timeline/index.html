@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honeymoon Timeline — Giamo &amp; Kim Uyên</title>
+  <meta name="google" content="notranslate">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+
+  <script>
+    (function () {
+      var saved;
+      try { saved = localStorage.getItem('weddingTheme'); } catch (_) {}
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = (saved === 'dark' || (saved !== 'light' && prefersDark)) ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root, [data-theme="dark"] {
+      --bg: #070706; --bg2: #0D0C0A;
+      --gold: #D4A84A; --gold-bright: #F0C85A; --gold-pale: #F8DF90;
+      --gold-dim: #A07830; --gold-dark: #6A5018;
+      --text-bright: #F8D878; --text-dim: #B89040; --text-body: #D4A848;
+      --border: #6A5018; --card-bg: #0D0C0A; --overlay-bg: rgba(4,4,3,0.94);
+    }
+    [data-theme="light"] {
+      --bg: #F8F2E4; --bg2: #F0E8D0;
+      --gold: #7A5010; --gold-bright: #9A6818; --gold-pale: #B88828;
+      --gold-dim: #5A3C0A; --gold-dark: #C8A048;
+      --text-bright: #1A0E08; --text-dim: #5C3A20; --text-body: #3C2810;
+      --border: #C8A048; --card-bg: #F8F2E4; --overlay-bg: rgba(20,14,8,0.94);
+    }
+
+    body {
+      font-family: 'EB Garamond', serif;
+      background: var(--bg);
+      color: var(--text-body);
+      min-height: 100vh;
+      transition: background 0.35s, color 0.35s;
+    }
+
+    .top-bar {
+      position: sticky; top: 0; z-index: 200;
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .top-bar-links { display: flex; gap: 10px; flex-wrap: wrap; }
+    .back-link {
+      font-family: 'Cinzel', serif; font-size: 10px; font-weight: 500;
+      letter-spacing: 0.2em; color: var(--gold-dim); text-decoration: none;
+      border: 1px solid var(--border); padding: 8px 14px; transition: all 0.2s; white-space: nowrap;
+    }
+    .back-link:hover { background: var(--border); color: var(--text-bright); }
+    .theme-btn {
+      background: transparent; border: 1px solid var(--border); color: var(--gold-dim);
+      width: 34px; height: 34px; font-size: 13px; cursor: pointer; transition: all 0.2s;
+    }
+    .theme-btn:hover { background: var(--border); color: var(--text-bright); }
+
+    .page-header { text-align: center; padding: 56px 24px 20px; }
+    .gh-eyebrow { font-family: 'Cinzel', serif; font-size: 10px; font-weight: 500; letter-spacing: 0.4em; color: var(--gold-dim); margin-bottom: 14px; }
+    .gh-title {
+      font-family: 'Cinzel', serif; font-size: clamp(26px, 5.5vw, 46px); font-weight: 700; letter-spacing: 0.08em;
+      background: linear-gradient(175deg, var(--gold-pale) 0%, var(--gold) 55%, var(--gold-dim) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    [data-theme="light"] .gh-title { -webkit-text-fill-color: var(--gold); background: none; }
+    .gh-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(15px, 2vw, 19px); color: var(--gold-dim); margin-top: 12px; }
+
+    .days-wrap { max-width: 1200px; margin: 0 auto; padding: 20px 0 100px; }
+
+    .day-section { padding: 34px 24px; }
+    .day-head {
+      display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;
+      max-width: 1152px; margin-left: auto; margin-right: auto;
+      flex-wrap: wrap;
+    }
+    .day-num {
+      font-family: 'Cinzel', serif; font-weight: 700; font-size: 22px;
+      color: var(--gold);
+    }
+    .day-date {
+      font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: var(--text-dim);
+    }
+    .day-loc {
+      font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.16em;
+      color: var(--gold-pale); border: 1px solid var(--gold-dim); padding: 4px 10px;
+      margin-left: auto;
+    }
+    .day-track {
+      display: flex; gap: 8px; overflow-x: auto; padding: 4px 0 10px;
+      scroll-snap-type: x proximity;
+    }
+    .day-tile {
+      flex: 0 0 auto; width: 200px; aspect-ratio: 4/5;
+      cursor: pointer; overflow: hidden; scroll-snap-align: start;
+      background: var(--card-bg);
+    }
+    .day-tile img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0; transition: opacity 0.3s, transform 0.4s; }
+    .day-tile img.loaded { opacity: 1; }
+    .day-tile:hover img { transform: scale(1.05); }
+
+    footer { text-align: center; padding: 40px 24px; border-top: 1px solid var(--border); font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.24em; color: var(--gold-dim); }
+
+    /* ── LIGHTBOX ──────────────────────────── */
+    .lightbox { position: fixed; inset: 0; background: var(--overlay-bg); z-index: 300; display: none; align-items: center; justify-content: center; flex-direction: column; padding: 20px; }
+    .lightbox.open { display: flex; }
+    .lb-media-wrap { max-width: 92vw; max-height: 72vh; display: flex; align-items: center; justify-content: center; }
+    .lb-media-wrap img { max-width: 92vw; max-height: 72vh; object-fit: contain; }
+    .lb-tags { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 18px; }
+    .lb-tag { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.16em; color: var(--gold-pale); border: 1px solid var(--gold-dim); padding: 5px 12px; }
+    .lb-close, .lb-prev, .lb-next {
+      position: fixed; background: transparent; border: 1px solid var(--border); color: var(--gold-pale);
+      cursor: pointer; font-size: 20px; width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center; transition: all 0.2s;
+    }
+    .lb-close:hover, .lb-prev:hover, .lb-next:hover { background: var(--gold-dim); color: var(--bg); }
+    .lb-close { top: 20px; right: 20px; }
+    .lb-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+    .lb-next { right: 20px; top: 50%; transform: translateY(-50%); }
+    @media (max-width: 640px) {
+      .day-tile { width: 150px; }
+      .lb-prev, .lb-next { width: 38px; height: 38px; font-size: 16px; }
+      .lb-prev { left: 8px; } .lb-next { right: 8px; }
+      .lb-close { top: 10px; right: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-bar">
+    <div class="top-bar-links">
+      <a class="back-link" href="../index.html">← Home</a>
+      <a class="back-link" href="../gallery/index.html">Photos</a>
+      <a class="back-link" href="../videos/index.html">Videos</a>
+      <a class="back-link" href="../map/index.html">Map</a>
+    </div>
+    <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle light / dark">☀</button>
+  </nav>
+
+  <header class="page-header">
+    <p class="gh-eyebrow">✦ &nbsp; Day by Day &nbsp; ✦</p>
+    <h1 class="gh-title">The Story</h1>
+    <p class="gh-sub">18 days across Japan &amp; Vietnam, in order</p>
+  </header>
+
+  <div class="days-wrap" id="days-wrap"></div>
+
+  <footer>Giamo &amp; Kim Uyên — Honeymoon Timeline</footer>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <button class="lb-prev" onclick="navLightbox(-1)">‹</button>
+    <button class="lb-next" onclick="navLightbox(1)">›</button>
+    <div class="lb-media-wrap" id="lb-media-wrap"></div>
+    <div class="lb-tags" id="lb-tags"></div>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('weddingTheme', next); } catch (_) {}
+      document.getElementById('theme-btn').textContent = next === 'dark' ? '☾' : '☀';
+    }
+    (function () {
+      document.getElementById('theme-btn').textContent =
+        document.documentElement.getAttribute('data-theme') === 'dark' ? '☾' : '☀';
+    })();
+
+    let currentDayPhotos = [];
+    let lbIndex = -1;
+
+    function openLightbox(photos, i) {
+      currentDayPhotos = photos;
+      lbIndex = i;
+      renderLightbox();
+      document.getElementById('lightbox').classList.add('open');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.getElementById('lb-media-wrap').innerHTML = '';
+    }
+    function navLightbox(delta) {
+      lbIndex = (lbIndex + delta + currentDayPhotos.length) % currentDayPhotos.length;
+      renderLightbox();
+    }
+    function renderLightbox() {
+      const it = currentDayPhotos[lbIndex];
+      const wrap = document.getElementById('lb-media-wrap');
+      wrap.innerHTML = '';
+      const img = document.createElement('img');
+      img.src = '../gallery/' + it.display;
+      wrap.appendChild(img);
+      const tagsEl = document.getElementById('lb-tags');
+      tagsEl.innerHTML = '';
+      it.tags.forEach(t => {
+        const span = document.createElement('span');
+        span.className = 'lb-tag';
+        span.textContent = t;
+        tagsEl.appendChild(span);
+      });
+    }
+    document.addEventListener('keydown', e => {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') { e.preventDefault(); navLightbox(-1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); navLightbox(1); }
+    });
+    document.getElementById('lightbox').addEventListener('click', e => {
+      if (e.target.id === 'lightbox') closeLightbox();
+    });
+
+    fetch('days.json')
+      .then(r => r.json())
+      .then(days => {
+        const wrap = document.getElementById('days-wrap');
+        days.forEach(day => {
+          const section = document.createElement('section');
+          section.className = 'day-section';
+
+          const head = document.createElement('div');
+          head.className = 'day-head';
+          head.innerHTML = `
+            <span class="day-num">Day ${day.day}</span>
+            <span class="day-date">${day.label}</span>
+            <span class="day-loc">${day.location}</span>
+          `;
+          section.appendChild(head);
+
+          const track = document.createElement('div');
+          track.className = 'day-track';
+          day.photos.forEach((p, i) => {
+            const tile = document.createElement('div');
+            tile.className = 'day-tile';
+            tile.onclick = () => openLightbox(day.photos, i);
+            const img = document.createElement('img');
+            img.loading = 'lazy';
+            img.src = '../gallery/' + p.thumb;
+            img.onload = () => img.classList.add('loaded');
+            tile.appendChild(img);
+            track.appendChild(tile);
+          });
+          section.appendChild(track);
+          wrap.appendChild(section);
+        });
+      });
+  </script>
+</body>
+</html>

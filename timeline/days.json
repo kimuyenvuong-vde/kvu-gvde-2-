@@ -1,0 +1,2496 @@
+[
+ {
+  "day": 1,
+  "date": "2026-09-08",
+  "label": "Tuesday, September 8",
+  "location": "Japan",
+  "count": 86,
+  "photos": [
+   {
+    "id": "p0025",
+    "thumb": "assets/thumb/p0025.jpg",
+    "display": "assets/display/p0025.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Japan",
+     "Street Life",
+     "Nightlife"
+    ]
+   },
+   {
+    "id": "p0044",
+    "thumb": "assets/thumb/p0044.jpg",
+    "display": "assets/display/p0044.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Together",
+     "Japan",
+     "Street Life"
+    ]
+   },
+   {
+    "id": "p0045",
+    "thumb": "assets/thumb/p0045.jpg",
+    "display": "assets/display/p0045.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Together",
+     "Japan",
+     "Street Life"
+    ]
+   },
+   {
+    "id": "p0051",
+    "thumb": "assets/thumb/p0051.jpg",
+    "display": "assets/display/p0051.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Together",
+     "Japan",
+     "Street Life"
+    ]
+   },
+   {
+    "id": "p0062",
+    "thumb": "assets/thumb/p0062.jpg",
+    "display": "assets/display/p0062.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p0066",
+    "thumb": "assets/thumb/p0066.jpg",
+    "display": "assets/display/p0066.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Together",
+     "Japan",
+     "Temples & Shrines",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p0071",
+    "thumb": "assets/thumb/p0071.jpg",
+    "display": "assets/display/p0071.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Together",
+     "Japan",
+     "Temples & Shrines",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p0072",
+    "thumb": "assets/thumb/p0072.jpg",
+    "display": "assets/display/p0072.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Together",
+     "Japan",
+     "Temples & Shrines",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p0020",
+    "thumb": "assets/thumb/p0020.jpg",
+    "display": "assets/display/p0020.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p0022",
+    "thumb": "assets/thumb/p0022.jpg",
+    "display": "assets/display/p0022.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p0027",
+    "thumb": "assets/thumb/p0027.jpg",
+    "display": "assets/display/p0027.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Japan",
+     "Street Life",
+     "Nightlife"
+    ]
+   },
+   {
+    "id": "p0042",
+    "thumb": "assets/thumb/p0042.jpg",
+    "display": "assets/display/p0042.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Japan",
+     "Street Life"
+    ]
+   },
+   {
+    "id": "p0060",
+    "thumb": "assets/thumb/p0060.jpg",
+    "display": "assets/display/p0060.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p0063",
+    "thumb": "assets/thumb/p0063.jpg",
+    "display": "assets/display/p0063.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Landmarks & Architecture"
+    ]
+   }
+  ]
+ },
+ {
+  "day": 2,
+  "date": "2026-09-09",
+  "label": "Wednesday, September 9",
+  "location": "Japan",
+  "count": 10,
+  "photos": [
+   {
+    "id": "p0108",
+    "thumb": "assets/thumb/p0108.jpg",
+    "display": "assets/display/p0108.jpg",
+    "beauty": 6.5,
+    "tags": [
+     "Food",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p0112",
+    "thumb": "assets/thumb/p0112.jpg",
+    "display": "assets/display/p0112.jpg",
+    "beauty": 6.5,
+    "tags": [
+     "Japan",
+     "Landmarks & Architecture",
+     "Street Life"
+    ]
+   },
+   {
+    "id": "p0109",
+    "thumb": "assets/thumb/p0109.jpg",
+    "display": "assets/display/p0109.jpg",
+    "beauty": 6.0,
+    "tags": [
+     "Food",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p0110",
+    "thumb": "assets/thumb/p0110.jpg",
+    "display": "assets/display/p0110.jpg",
+    "beauty": 6.0,
+    "tags": [
+     "Food",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p0106",
+    "thumb": "assets/thumb/p0106.jpg",
+    "display": "assets/display/p0106.jpg",
+    "beauty": 5.75,
+    "tags": [
+     "Japan",
+     "Street Life"
+    ]
+   },
+   {
+    "id": "p0111",
+    "thumb": "assets/thumb/p0111.jpg",
+    "display": "assets/display/p0111.jpg",
+    "beauty": 5.75,
+    "tags": [
+     "Japan",
+     "Landmarks & Architecture",
+     "Street Life"
+    ]
+   },
+   {
+    "id": "p0107",
+    "thumb": "assets/thumb/p0107.jpg",
+    "display": "assets/display/p0107.jpg",
+    "beauty": 5.5,
+    "tags": [
+     "Japan",
+     "Street Life"
+    ]
+   },
+   {
+    "id": "p0103",
+    "thumb": "assets/thumb/p0103.jpg",
+    "display": "assets/display/p0103.jpg",
+    "beauty": 5.25,
+    "tags": [
+     "Japan",
+     "Nightlife",
+     "Street Life"
+    ]
+   },
+   {
+    "id": "p0104",
+    "thumb": "assets/thumb/p0104.jpg",
+    "display": "assets/display/p0104.jpg",
+    "beauty": 5.25,
+    "tags": [
+     "Japan",
+     "Street Life"
+    ]
+   },
+   {
+    "id": "p0105",
+    "thumb": "assets/thumb/p0105.jpg",
+    "display": "assets/display/p0105.jpg",
+    "beauty": 5.25,
+    "tags": [
+     "Japan",
+     "Street Life"
+    ]
+   }
+  ]
+ },
+ {
+  "day": 3,
+  "date": "2026-09-10",
+  "label": "Thursday, September 10",
+  "location": "Japan",
+  "count": 106,
+  "photos": [
+   {
+    "id": "p0146",
+    "thumb": "assets/thumb/p0146.jpg",
+    "display": "assets/display/p0146.jpg",
+    "beauty": 7.0,
+    "tags": [
+     "Food",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p0132",
+    "thumb": "assets/thumb/p0132.jpg",
+    "display": "assets/display/p0132.jpg",
+    "beauty": 6.75,
+    "tags": [
+     "Japan",
+     "Nature & Animals",
+     "Temples & Shrines"
+    ]
+   },
+   {
+    "id": "p0136",
+    "thumb": "assets/thumb/p0136.jpg",
+    "display": "assets/display/p0136.jpg",
+    "beauty": 6.75,
+    "tags": [
+     "Japan",
+     "Nature & Animals",
+     "Temples & Shrines"
+    ]
+   },
+   {
+    "id": "p0137",
+    "thumb": "assets/thumb/p0137.jpg",
+    "display": "assets/display/p0137.jpg",
+    "beauty": 6.75,
+    "tags": [
+     "Japan",
+     "Temples & Shrines"
+    ]
+   },
+   {
+    "id": "p0145",
+    "thumb": "assets/thumb/p0145.jpg",
+    "display": "assets/display/p0145.jpg",
+    "beauty": 6.75,
+    "tags": [
+     "Food",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p0217",
+    "thumb": "assets/thumb/p0217.jpg",
+    "display": "assets/display/p0217.jpg",
+    "beauty": 6.75,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline",
+     "Street Life"
+    ]
+   },
+   {
+    "id": "p0218",
+    "thumb": "assets/thumb/p0218.jpg",
+    "display": "assets/display/p0218.jpg",
+    "beauty": 6.75,
+    "tags": [
+     "Selfies",
+     "Together",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p0117",
+    "thumb": "assets/thumb/p0117.jpg",
+    "display": "assets/display/p0117.jpg",
+    "beauty": 6.5,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p0122",
+    "thumb": "assets/thumb/p0122.jpg",
+    "display": "assets/display/p0122.jpg",
+    "beauty": 6.5,
+    "tags": [
+     "Japan",
+     "Temples & Shrines"
+    ]
+   },
+   {
+    "id": "p0123",
+    "thumb": "assets/thumb/p0123.jpg",
+    "display": "assets/display/p0123.jpg",
+    "beauty": 6.5,
+    "tags": [
+     "Japan",
+     "Temples & Shrines"
+    ]
+   },
+   {
+    "id": "p0128",
+    "thumb": "assets/thumb/p0128.jpg",
+    "display": "assets/display/p0128.jpg",
+    "beauty": 6.5,
+    "tags": [
+     "Japan",
+     "Nature & Animals"
+    ]
+   },
+   {
+    "id": "p0129",
+    "thumb": "assets/thumb/p0129.jpg",
+    "display": "assets/display/p0129.jpg",
+    "beauty": 6.5,
+    "tags": [
+     "Japan",
+     "Nature & Animals"
+    ]
+   },
+   {
+    "id": "p0131",
+    "thumb": "assets/thumb/p0131.jpg",
+    "display": "assets/display/p0131.jpg",
+    "beauty": 6.5,
+    "tags": [
+     "Japan",
+     "Nature & Animals",
+     "Temples & Shrines"
+    ]
+   },
+   {
+    "id": "p0134",
+    "thumb": "assets/thumb/p0134.jpg",
+    "display": "assets/display/p0134.jpg",
+    "beauty": 6.5,
+    "tags": [
+     "Japan",
+     "Nature & Animals",
+     "Temples & Shrines"
+    ]
+   }
+  ]
+ },
+ {
+  "day": 4,
+  "date": "2026-09-11",
+  "label": "Friday, September 11",
+  "location": "Japan",
+  "count": 155,
+  "photos": [
+   {
+    "id": "p0281",
+    "thumb": "assets/thumb/p0281.jpg",
+    "display": "assets/display/p0281.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Japan",
+     "Landmarks & Architecture",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p0232",
+    "thumb": "assets/thumb/p0232.jpg",
+    "display": "assets/display/p0232.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Japan",
+     "Street Life",
+     "Nightlife"
+    ]
+   },
+   {
+    "id": "p0250",
+    "thumb": "assets/thumb/p0250.jpg",
+    "display": "assets/display/p0250.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Selfies",
+     "Together",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p0251",
+    "thumb": "assets/thumb/p0251.jpg",
+    "display": "assets/display/p0251.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Selfies",
+     "Together",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p0254",
+    "thumb": "assets/thumb/p0254.jpg",
+    "display": "assets/display/p0254.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Selfies",
+     "Together",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p0282",
+    "thumb": "assets/thumb/p0282.jpg",
+    "display": "assets/display/p0282.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Japan",
+     "Landmarks & Architecture",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p0307",
+    "thumb": "assets/thumb/p0307.jpg",
+    "display": "assets/display/p0307.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Japan",
+     "Street Life"
+    ]
+   },
+   {
+    "id": "p0347",
+    "thumb": "assets/thumb/p0347.jpg",
+    "display": "assets/display/p0347.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Japan",
+     "Temples & Shrines"
+    ]
+   },
+   {
+    "id": "p0371",
+    "thumb": "assets/thumb/p0371.jpg",
+    "display": "assets/display/p0371.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Japan",
+     "Temples & Shrines"
+    ]
+   },
+   {
+    "id": "p0234",
+    "thumb": "assets/thumb/p0234.jpg",
+    "display": "assets/display/p0234.jpg",
+    "beauty": 7.0,
+    "tags": [
+     "Japan",
+     "Street Life",
+     "Nightlife"
+    ]
+   },
+   {
+    "id": "p0248",
+    "thumb": "assets/thumb/p0248.jpg",
+    "display": "assets/display/p0248.jpg",
+    "beauty": 7.0,
+    "tags": [
+     "Selfies",
+     "Together",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p0253",
+    "thumb": "assets/thumb/p0253.jpg",
+    "display": "assets/display/p0253.jpg",
+    "beauty": 7.0,
+    "tags": [
+     "Selfies",
+     "Together",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p0257",
+    "thumb": "assets/thumb/p0257.jpg",
+    "display": "assets/display/p0257.jpg",
+    "beauty": 7.0,
+    "tags": [
+     "Japan",
+     "Nature & Animals"
+    ]
+   },
+   {
+    "id": "p0280",
+    "thumb": "assets/thumb/p0280.jpg",
+    "display": "assets/display/p0280.jpg",
+    "beauty": 7.0,
+    "tags": [
+     "Japan",
+     "Landmarks & Architecture",
+     "Scenery & Skyline"
+    ]
+   }
+  ]
+ },
+ {
+  "day": 5,
+  "date": "2026-09-12",
+  "label": "Saturday, September 12",
+  "location": "Japan",
+  "count": 323,
+  "photos": [
+   {
+    "id": "p0646",
+    "thumb": "assets/thumb/p0646.jpg",
+    "display": "assets/display/p0646.jpg",
+    "beauty": 8.0,
+    "tags": [
+     "Together",
+     "Japan",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p0412",
+    "thumb": "assets/thumb/p0412.jpg",
+    "display": "assets/display/p0412.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Japan",
+     "Culture & Performances",
+     "Temples & Shrines"
+    ]
+   },
+   {
+    "id": "p0416",
+    "thumb": "assets/thumb/p0416.jpg",
+    "display": "assets/display/p0416.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Japan",
+     "Culture & Performances",
+     "Temples & Shrines",
+     "Together"
+    ]
+   },
+   {
+    "id": "p0647",
+    "thumb": "assets/thumb/p0647.jpg",
+    "display": "assets/display/p0647.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Together",
+     "Japan",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p0419",
+    "thumb": "assets/thumb/p0419.jpg",
+    "display": "assets/display/p0419.jpg",
+    "beauty": 7.45,
+    "tags": [
+     "Japan",
+     "Culture & Performances",
+     "Temples & Shrines",
+     "Together"
+    ]
+   },
+   {
+    "id": "p0591",
+    "thumb": "assets/thumb/p0591.jpg",
+    "display": "assets/display/p0591.jpg",
+    "beauty": 7.45,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p0423",
+    "thumb": "assets/thumb/p0423.jpg",
+    "display": "assets/display/p0423.jpg",
+    "beauty": 7.4,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Culture & Performances"
+    ]
+   },
+   {
+    "id": "p0593",
+    "thumb": "assets/thumb/p0593.jpg",
+    "display": "assets/display/p0593.jpg",
+    "beauty": 7.35,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p0592",
+    "thumb": "assets/thumb/p0592.jpg",
+    "display": "assets/display/p0592.jpg",
+    "beauty": 7.3,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p0595",
+    "thumb": "assets/thumb/p0595.jpg",
+    "display": "assets/display/p0595.jpg",
+    "beauty": 7.3,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p0544",
+    "thumb": "assets/thumb/p0544.jpg",
+    "display": "assets/display/p0544.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p0562",
+    "thumb": "assets/thumb/p0562.jpg",
+    "display": "assets/display/p0562.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p0563",
+    "thumb": "assets/thumb/p0563.jpg",
+    "display": "assets/display/p0563.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p0574",
+    "thumb": "assets/thumb/p0574.jpg",
+    "display": "assets/display/p0574.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline"
+    ]
+   }
+  ]
+ },
+ {
+  "day": 6,
+  "date": "2026-09-13",
+  "label": "Sunday, September 13",
+  "location": "Japan",
+  "count": 20,
+  "photos": [
+   {
+    "id": "p0702",
+    "thumb": "assets/thumb/p0702.jpg",
+    "display": "assets/display/p0702.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Japan"
+    ]
+   },
+   {
+    "id": "p0711",
+    "thumb": "assets/thumb/p0711.jpg",
+    "display": "assets/display/p0711.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Japan",
+     "Street Life",
+     "Nightlife",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p0703",
+    "thumb": "assets/thumb/p0703.jpg",
+    "display": "assets/display/p0703.jpg",
+    "beauty": 6.75,
+    "tags": [
+     "Japan",
+     "Street Life",
+     "Nightlife"
+    ]
+   },
+   {
+    "id": "p0708",
+    "thumb": "assets/thumb/p0708.jpg",
+    "display": "assets/display/p0708.jpg",
+    "beauty": 6.75,
+    "tags": [
+     "Selfies",
+     "Japan",
+     "Street Life",
+     "Nightlife",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p0712",
+    "thumb": "assets/thumb/p0712.jpg",
+    "display": "assets/display/p0712.jpg",
+    "beauty": 6.5,
+    "tags": [
+     "Japan",
+     "Street Life",
+     "Nightlife",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p0704",
+    "thumb": "assets/thumb/p0704.jpg",
+    "display": "assets/display/p0704.jpg",
+    "beauty": 6.25,
+    "tags": [
+     "Japan",
+     "Street Life",
+     "Nightlife"
+    ]
+   },
+   {
+    "id": "p0707",
+    "thumb": "assets/thumb/p0707.jpg",
+    "display": "assets/display/p0707.jpg",
+    "beauty": 6.25,
+    "tags": [
+     "Japan",
+     "Street Life",
+     "Nightlife",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p0698",
+    "thumb": "assets/thumb/p0698.jpg",
+    "display": "assets/display/p0698.jpg",
+    "beauty": 6.0,
+    "tags": [
+     "Food",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p0699",
+    "thumb": "assets/thumb/p0699.jpg",
+    "display": "assets/display/p0699.jpg",
+    "beauty": 6.0,
+    "tags": [
+     "Food",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p0700",
+    "thumb": "assets/thumb/p0700.jpg",
+    "display": "assets/display/p0700.jpg",
+    "beauty": 6.0,
+    "tags": [
+     "Food",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p0710",
+    "thumb": "assets/thumb/p0710.jpg",
+    "display": "assets/display/p0710.jpg",
+    "beauty": 6.0,
+    "tags": [
+     "Japan",
+     "Street Life",
+     "Nightlife",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p0713",
+    "thumb": "assets/thumb/p0713.jpg",
+    "display": "assets/display/p0713.jpg",
+    "beauty": 6.0,
+    "tags": [
+     "Japan",
+     "Street Life",
+     "Nightlife",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p0705",
+    "thumb": "assets/thumb/p0705.jpg",
+    "display": "assets/display/p0705.jpg",
+    "beauty": 5.75,
+    "tags": [
+     "Japan",
+     "Culture & Performances",
+     "Nightlife",
+     "Street Life"
+    ]
+   },
+   {
+    "id": "p0706",
+    "thumb": "assets/thumb/p0706.jpg",
+    "display": "assets/display/p0706.jpg",
+    "beauty": 5.75,
+    "tags": [
+     "Japan",
+     "Culture & Performances",
+     "Nightlife",
+     "Street Life"
+    ]
+   }
+  ]
+ },
+ {
+  "day": 7,
+  "date": "2026-09-14",
+  "label": "Monday, September 14",
+  "location": "Japan",
+  "count": 25,
+  "photos": [
+   {
+    "id": "p0740",
+    "thumb": "assets/thumb/p0740.jpg",
+    "display": "assets/display/p0740.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Japan",
+     "Street Life",
+     "Nightlife",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p0729",
+    "thumb": "assets/thumb/p0729.jpg",
+    "display": "assets/display/p0729.jpg",
+    "beauty": 6.75,
+    "tags": [
+     "Japan",
+     "Landmarks & Architecture",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p0732",
+    "thumb": "assets/thumb/p0732.jpg",
+    "display": "assets/display/p0732.jpg",
+    "beauty": 6.75,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Nightlife"
+    ]
+   },
+   {
+    "id": "p0725",
+    "thumb": "assets/thumb/p0725.jpg",
+    "display": "assets/display/p0725.jpg",
+    "beauty": 6.5,
+    "tags": [
+     "Japan",
+     "Landmarks & Architecture",
+     "Culture & Performances"
+    ]
+   },
+   {
+    "id": "p0726",
+    "thumb": "assets/thumb/p0726.jpg",
+    "display": "assets/display/p0726.jpg",
+    "beauty": 6.4,
+    "tags": [
+     "Japan",
+     "Landmarks & Architecture",
+     "Culture & Performances"
+    ]
+   },
+   {
+    "id": "p0727",
+    "thumb": "assets/thumb/p0727.jpg",
+    "display": "assets/display/p0727.jpg",
+    "beauty": 6.4,
+    "tags": [
+     "Japan",
+     "Landmarks & Architecture",
+     "Culture & Performances"
+    ]
+   },
+   {
+    "id": "p0720",
+    "thumb": "assets/thumb/p0720.jpg",
+    "display": "assets/display/p0720.jpg",
+    "beauty": 6.25,
+    "tags": [
+     "Japan",
+     "Culture & Performances"
+    ]
+   },
+   {
+    "id": "p0721",
+    "thumb": "assets/thumb/p0721.jpg",
+    "display": "assets/display/p0721.jpg",
+    "beauty": 6.25,
+    "tags": [
+     "Japan",
+     "Culture & Performances"
+    ]
+   },
+   {
+    "id": "p0734",
+    "thumb": "assets/thumb/p0734.jpg",
+    "display": "assets/display/p0734.jpg",
+    "beauty": 6.25,
+    "tags": [
+     "Food",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p0717",
+    "thumb": "assets/thumb/p0717.jpg",
+    "display": "assets/display/p0717.jpg",
+    "beauty": 6.0,
+    "tags": [
+     "Selfies",
+     "Japan",
+     "Culture & Performances"
+    ]
+   },
+   {
+    "id": "p0718",
+    "thumb": "assets/thumb/p0718.jpg",
+    "display": "assets/display/p0718.jpg",
+    "beauty": 6.0,
+    "tags": [
+     "Selfies",
+     "Japan",
+     "Culture & Performances"
+    ]
+   },
+   {
+    "id": "p0723",
+    "thumb": "assets/thumb/p0723.jpg",
+    "display": "assets/display/p0723.jpg",
+    "beauty": 6.0,
+    "tags": [
+     "Japan",
+     "Culture & Performances"
+    ]
+   },
+   {
+    "id": "p0724",
+    "thumb": "assets/thumb/p0724.jpg",
+    "display": "assets/display/p0724.jpg",
+    "beauty": 6.0,
+    "tags": [
+     "Japan",
+     "Culture & Performances"
+    ]
+   },
+   {
+    "id": "p0728",
+    "thumb": "assets/thumb/p0728.jpg",
+    "display": "assets/display/p0728.jpg",
+    "beauty": 6.0,
+    "tags": [
+     "Japan",
+     "Landmarks & Architecture",
+     "Culture & Performances"
+    ]
+   }
+  ]
+ },
+ {
+  "day": 8,
+  "date": "2026-09-15",
+  "label": "Tuesday, September 15",
+  "location": "Japan",
+  "count": 332,
+  "photos": [
+   {
+    "id": "p0773",
+    "thumb": "assets/thumb/p0773.jpg",
+    "display": "assets/display/p0773.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Nature & Animals"
+    ]
+   },
+   {
+    "id": "p0787",
+    "thumb": "assets/thumb/p0787.jpg",
+    "display": "assets/display/p0787.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Culture & Performances",
+     "Nature & Animals"
+    ]
+   },
+   {
+    "id": "p0788",
+    "thumb": "assets/thumb/p0788.jpg",
+    "display": "assets/display/p0788.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Culture & Performances",
+     "Nature & Animals"
+    ]
+   },
+   {
+    "id": "p0792",
+    "thumb": "assets/thumb/p0792.jpg",
+    "display": "assets/display/p0792.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Culture & Performances",
+     "Nature & Animals"
+    ]
+   },
+   {
+    "id": "p0907",
+    "thumb": "assets/thumb/p0907.jpg",
+    "display": "assets/display/p0907.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Culture & Performances",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1023",
+    "thumb": "assets/thumb/p1023.jpg",
+    "display": "assets/display/p1023.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1024",
+    "thumb": "assets/thumb/p1024.jpg",
+    "display": "assets/display/p1024.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p0954",
+    "thumb": "assets/thumb/p0954.jpg",
+    "display": "assets/display/p0954.jpg",
+    "beauty": 7.65,
+    "tags": [
+     "Japan",
+     "Culture & Performances",
+     "Landmarks & Architecture",
+     "Nature & Animals"
+    ]
+   },
+   {
+    "id": "p1025",
+    "thumb": "assets/thumb/p1025.jpg",
+    "display": "assets/display/p1025.jpg",
+    "beauty": 7.65,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1048",
+    "thumb": "assets/thumb/p1048.jpg",
+    "display": "assets/display/p1048.jpg",
+    "beauty": 7.65,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p0744",
+    "thumb": "assets/thumb/p0744.jpg",
+    "display": "assets/display/p0744.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Japan",
+     "Culture & Performances"
+    ]
+   },
+   {
+    "id": "p0745",
+    "thumb": "assets/thumb/p0745.jpg",
+    "display": "assets/display/p0745.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Japan",
+     "Culture & Performances"
+    ]
+   },
+   {
+    "id": "p0786",
+    "thumb": "assets/thumb/p0786.jpg",
+    "display": "assets/display/p0786.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Culture & Performances",
+     "Nature & Animals"
+    ]
+   },
+   {
+    "id": "p0790",
+    "thumb": "assets/thumb/p0790.jpg",
+    "display": "assets/display/p0790.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Culture & Performances",
+     "Nature & Animals"
+    ]
+   }
+  ]
+ },
+ {
+  "day": 9,
+  "date": "2026-09-16",
+  "label": "Wednesday, September 16",
+  "location": "Japan",
+  "count": 12,
+  "photos": [
+   {
+    "id": "p1079",
+    "thumb": "assets/thumb/p1079.jpg",
+    "display": "assets/display/p1079.jpg",
+    "beauty": 6.5,
+    "tags": [
+     "Japan",
+     "Nightlife",
+     "Street Life"
+    ]
+   },
+   {
+    "id": "p1077",
+    "thumb": "assets/thumb/p1077.jpg",
+    "display": "assets/display/p1077.jpg",
+    "beauty": 6.25,
+    "tags": [
+     "Food",
+     "Selfies",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p1080",
+    "thumb": "assets/thumb/p1080.jpg",
+    "display": "assets/display/p1080.jpg",
+    "beauty": 6.25,
+    "tags": [
+     "Japan",
+     "Nightlife",
+     "Street Life"
+    ]
+   },
+   {
+    "id": "p1074",
+    "thumb": "assets/thumb/p1074.jpg",
+    "display": "assets/display/p1074.jpg",
+    "beauty": 5.75,
+    "tags": [
+     "Selfies",
+     "Japan",
+     "Nightlife"
+    ]
+   },
+   {
+    "id": "p1076",
+    "thumb": "assets/thumb/p1076.jpg",
+    "display": "assets/display/p1076.jpg",
+    "beauty": 5.5,
+    "tags": [
+     "Food",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p1081",
+    "thumb": "assets/thumb/p1081.jpg",
+    "display": "assets/display/p1081.jpg",
+    "beauty": 5.5,
+    "tags": [
+     "Japan",
+     "Nightlife",
+     "Street Life"
+    ]
+   },
+   {
+    "id": "p1082",
+    "thumb": "assets/thumb/p1082.jpg",
+    "display": "assets/display/p1082.jpg",
+    "beauty": 5.5,
+    "tags": [
+     "Japan",
+     "Nightlife",
+     "Street Life"
+    ]
+   },
+   {
+    "id": "p1078",
+    "thumb": "assets/thumb/p1078.jpg",
+    "display": "assets/display/p1078.jpg",
+    "beauty": 5.25,
+    "tags": [
+     "Food",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p1075",
+    "thumb": "assets/thumb/p1075.jpg",
+    "display": "assets/display/p1075.jpg",
+    "beauty": 4.25,
+    "tags": [
+     "Food",
+     "Japan",
+     "Nightlife"
+    ]
+   },
+   {
+    "id": "p1083",
+    "thumb": "assets/thumb/p1083.jpg",
+    "display": "assets/display/p1083.jpg",
+    "beauty": 4.25,
+    "tags": [
+     "Selfies",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p1084",
+    "thumb": "assets/thumb/p1084.jpg",
+    "display": "assets/display/p1084.jpg",
+    "beauty": 4.25,
+    "tags": [
+     "Selfies",
+     "Japan"
+    ]
+   },
+   {
+    "id": "p1085",
+    "thumb": "assets/thumb/p1085.jpg",
+    "display": "assets/display/p1085.jpg",
+    "beauty": 3.25,
+    "tags": [
+     "Japan"
+    ]
+   }
+  ]
+ },
+ {
+  "day": 10,
+  "date": "2026-09-17",
+  "label": "Thursday, September 17",
+  "location": "Transit",
+  "count": 292,
+  "photos": [
+   {
+    "id": "p1327",
+    "thumb": "assets/thumb/p1327.jpg",
+    "display": "assets/display/p1327.jpg",
+    "beauty": 8.5,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1328",
+    "thumb": "assets/thumb/p1328.jpg",
+    "display": "assets/display/p1328.jpg",
+    "beauty": 8.5,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1325",
+    "thumb": "assets/thumb/p1325.jpg",
+    "display": "assets/display/p1325.jpg",
+    "beauty": 8.0,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1329",
+    "thumb": "assets/thumb/p1329.jpg",
+    "display": "assets/display/p1329.jpg",
+    "beauty": 8.0,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1307",
+    "thumb": "assets/thumb/p1307.jpg",
+    "display": "assets/display/p1307.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Japan",
+     "Temples & Shrines",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1322",
+    "thumb": "assets/thumb/p1322.jpg",
+    "display": "assets/display/p1322.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1326",
+    "thumb": "assets/thumb/p1326.jpg",
+    "display": "assets/display/p1326.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1330",
+    "thumb": "assets/thumb/p1330.jpg",
+    "display": "assets/display/p1330.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1333",
+    "thumb": "assets/thumb/p1333.jpg",
+    "display": "assets/display/p1333.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1343",
+    "thumb": "assets/thumb/p1343.jpg",
+    "display": "assets/display/p1343.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1127",
+    "thumb": "assets/thumb/p1127.jpg",
+    "display": "assets/display/p1127.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Japan",
+     "Nature & Animals"
+    ]
+   },
+   {
+    "id": "p1332",
+    "thumb": "assets/thumb/p1332.jpg",
+    "display": "assets/display/p1332.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1334",
+    "thumb": "assets/thumb/p1334.jpg",
+    "display": "assets/display/p1334.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1342",
+    "thumb": "assets/thumb/p1342.jpg",
+    "display": "assets/display/p1342.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Japan",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   }
+  ]
+ },
+ {
+  "day": 11,
+  "date": "2026-09-18",
+  "label": "Friday, September 18",
+  "location": "Transit",
+  "count": 4,
+  "photos": [
+   {
+    "id": "p1381",
+    "thumb": "assets/thumb/p1381.jpg",
+    "display": "assets/display/p1381.jpg",
+    "beauty": 6.5,
+    "tags": [
+     "Vietnam",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1379",
+    "thumb": "assets/thumb/p1379.jpg",
+    "display": "assets/display/p1379.jpg",
+    "beauty": 5.5,
+    "tags": [
+     "Food",
+     "Japan",
+     "Selfies",
+     "Together"
+    ]
+   },
+   {
+    "id": "p1380",
+    "thumb": "assets/thumb/p1380.jpg",
+    "display": "assets/display/p1380.jpg",
+    "beauty": 5.5,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1378",
+    "thumb": "assets/thumb/p1378.jpg",
+    "display": "assets/display/p1378.jpg",
+    "beauty": 4.75,
+    "tags": [
+     "Japan"
+    ]
+   }
+  ]
+ },
+ {
+  "day": 12,
+  "date": "2026-09-19",
+  "label": "Saturday, September 19",
+  "location": "Vietnam",
+  "count": 181,
+  "photos": [
+   {
+    "id": "p1387",
+    "thumb": "assets/thumb/p1387.jpg",
+    "display": "assets/display/p1387.jpg",
+    "beauty": 8.0,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1389",
+    "thumb": "assets/thumb/p1389.jpg",
+    "display": "assets/display/p1389.jpg",
+    "beauty": 8.0,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1399",
+    "thumb": "assets/thumb/p1399.jpg",
+    "display": "assets/display/p1399.jpg",
+    "beauty": 7.9,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1544",
+    "thumb": "assets/thumb/p1544.jpg",
+    "display": "assets/display/p1544.jpg",
+    "beauty": 7.9,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1543",
+    "thumb": "assets/thumb/p1543.jpg",
+    "display": "assets/display/p1543.jpg",
+    "beauty": 7.85,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1396",
+    "thumb": "assets/thumb/p1396.jpg",
+    "display": "assets/display/p1396.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1397",
+    "thumb": "assets/thumb/p1397.jpg",
+    "display": "assets/display/p1397.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1400",
+    "thumb": "assets/thumb/p1400.jpg",
+    "display": "assets/display/p1400.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1390",
+    "thumb": "assets/thumb/p1390.jpg",
+    "display": "assets/display/p1390.jpg",
+    "beauty": 7.65,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1393",
+    "thumb": "assets/thumb/p1393.jpg",
+    "display": "assets/display/p1393.jpg",
+    "beauty": 7.65,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1541",
+    "thumb": "assets/thumb/p1541.jpg",
+    "display": "assets/display/p1541.jpg",
+    "beauty": 7.6,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1391",
+    "thumb": "assets/thumb/p1391.jpg",
+    "display": "assets/display/p1391.jpg",
+    "beauty": 7.55,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1388",
+    "thumb": "assets/thumb/p1388.jpg",
+    "display": "assets/display/p1388.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1398",
+    "thumb": "assets/thumb/p1398.jpg",
+    "display": "assets/display/p1398.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   }
+  ]
+ },
+ {
+  "day": 13,
+  "date": "2026-09-20",
+  "label": "Sunday, September 20",
+  "location": "Vietnam",
+  "count": 24,
+  "photos": [
+   {
+    "id": "p1571",
+    "thumb": "assets/thumb/p1571.jpg",
+    "display": "assets/display/p1571.jpg",
+    "beauty": 6.7,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1568",
+    "thumb": "assets/thumb/p1568.jpg",
+    "display": "assets/display/p1568.jpg",
+    "beauty": 6.5,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1569",
+    "thumb": "assets/thumb/p1569.jpg",
+    "display": "assets/display/p1569.jpg",
+    "beauty": 6.5,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1574",
+    "thumb": "assets/thumb/p1574.jpg",
+    "display": "assets/display/p1574.jpg",
+    "beauty": 6.45,
+    "tags": [
+     "Selfies",
+     "Together",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1565",
+    "thumb": "assets/thumb/p1565.jpg",
+    "display": "assets/display/p1565.jpg",
+    "beauty": 6.4,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1566",
+    "thumb": "assets/thumb/p1566.jpg",
+    "display": "assets/display/p1566.jpg",
+    "beauty": 6.35,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1570",
+    "thumb": "assets/thumb/p1570.jpg",
+    "display": "assets/display/p1570.jpg",
+    "beauty": 6.35,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1580",
+    "thumb": "assets/thumb/p1580.jpg",
+    "display": "assets/display/p1580.jpg",
+    "beauty": 6.35,
+    "tags": [
+     "Food",
+     "Selfies",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1583",
+    "thumb": "assets/thumb/p1583.jpg",
+    "display": "assets/display/p1583.jpg",
+    "beauty": 6.35,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1567",
+    "thumb": "assets/thumb/p1567.jpg",
+    "display": "assets/display/p1567.jpg",
+    "beauty": 6.3,
+    "tags": [
+     "Vietnam",
+     "Pool & Beach",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1573",
+    "thumb": "assets/thumb/p1573.jpg",
+    "display": "assets/display/p1573.jpg",
+    "beauty": 6.25,
+    "tags": [
+     "Selfies",
+     "Together",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1576",
+    "thumb": "assets/thumb/p1576.jpg",
+    "display": "assets/display/p1576.jpg",
+    "beauty": 6.2,
+    "tags": [
+     "Selfies",
+     "Together",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1577",
+    "thumb": "assets/thumb/p1577.jpg",
+    "display": "assets/display/p1577.jpg",
+    "beauty": 6.2,
+    "tags": [
+     "Selfies",
+     "Together",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1578",
+    "thumb": "assets/thumb/p1578.jpg",
+    "display": "assets/display/p1578.jpg",
+    "beauty": 6.2,
+    "tags": [
+     "Selfies",
+     "Together",
+     "Vietnam"
+    ]
+   }
+  ]
+ },
+ {
+  "day": 14,
+  "date": "2026-09-21",
+  "label": "Monday, September 21",
+  "location": "Vietnam",
+  "count": 2,
+  "photos": [
+   {
+    "id": "p1587",
+    "thumb": "assets/thumb/p1587.jpg",
+    "display": "assets/display/p1587.jpg",
+    "beauty": 4.0,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1588",
+    "thumb": "assets/thumb/p1588.jpg",
+    "display": "assets/display/p1588.jpg",
+    "beauty": 2.75,
+    "tags": [
+     "Vietnam"
+    ]
+   }
+  ]
+ },
+ {
+  "day": 15,
+  "date": "2026-09-22",
+  "label": "Tuesday, September 22",
+  "location": "Vietnam",
+  "count": 6,
+  "photos": [
+   {
+    "id": "p1589",
+    "thumb": "assets/thumb/p1589.jpg",
+    "display": "assets/display/p1589.jpg",
+    "beauty": 6.15,
+    "tags": [
+     "Selfies",
+     "Together",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1591",
+    "thumb": "assets/thumb/p1591.jpg",
+    "display": "assets/display/p1591.jpg",
+    "beauty": 5.85,
+    "tags": [
+     "Selfies",
+     "Together",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1590",
+    "thumb": "assets/thumb/p1590.jpg",
+    "display": "assets/display/p1590.jpg",
+    "beauty": 5.75,
+    "tags": [
+     "Selfies",
+     "Together",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1592",
+    "thumb": "assets/thumb/p1592.jpg",
+    "display": "assets/display/p1592.jpg",
+    "beauty": 4.5,
+    "tags": [
+     "Selfies",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1593",
+    "thumb": "assets/thumb/p1593.jpg",
+    "display": "assets/display/p1593.jpg",
+    "beauty": 4.0,
+    "tags": [
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1596",
+    "thumb": "assets/thumb/p1596.jpg",
+    "display": "assets/display/p1596.jpg",
+    "beauty": 3.25,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   }
+  ]
+ },
+ {
+  "day": 16,
+  "date": "2026-09-23",
+  "label": "Wednesday, September 23",
+  "location": "Vietnam",
+  "count": 30,
+  "photos": [
+   {
+    "id": "p1619",
+    "thumb": "assets/thumb/p1619.jpg",
+    "display": "assets/display/p1619.jpg",
+    "beauty": 6.85,
+    "tags": [
+     "Food",
+     "Together",
+     "Vietnam",
+     "Nightlife"
+    ]
+   },
+   {
+    "id": "p1618",
+    "thumb": "assets/thumb/p1618.jpg",
+    "display": "assets/display/p1618.jpg",
+    "beauty": 6.65,
+    "tags": [
+     "Food",
+     "Together",
+     "Vietnam",
+     "Nightlife"
+    ]
+   },
+   {
+    "id": "p1612",
+    "thumb": "assets/thumb/p1612.jpg",
+    "display": "assets/display/p1612.jpg",
+    "beauty": 6.6,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1609",
+    "thumb": "assets/thumb/p1609.jpg",
+    "display": "assets/display/p1609.jpg",
+    "beauty": 6.4,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1611",
+    "thumb": "assets/thumb/p1611.jpg",
+    "display": "assets/display/p1611.jpg",
+    "beauty": 6.4,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1604",
+    "thumb": "assets/thumb/p1604.jpg",
+    "display": "assets/display/p1604.jpg",
+    "beauty": 6.35,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1607",
+    "thumb": "assets/thumb/p1607.jpg",
+    "display": "assets/display/p1607.jpg",
+    "beauty": 6.3,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1610",
+    "thumb": "assets/thumb/p1610.jpg",
+    "display": "assets/display/p1610.jpg",
+    "beauty": 6.3,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1601",
+    "thumb": "assets/thumb/p1601.jpg",
+    "display": "assets/display/p1601.jpg",
+    "beauty": 6.25,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1603",
+    "thumb": "assets/thumb/p1603.jpg",
+    "display": "assets/display/p1603.jpg",
+    "beauty": 6.2,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1605",
+    "thumb": "assets/thumb/p1605.jpg",
+    "display": "assets/display/p1605.jpg",
+    "beauty": 6.2,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1606",
+    "thumb": "assets/thumb/p1606.jpg",
+    "display": "assets/display/p1606.jpg",
+    "beauty": 6.2,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1602",
+    "thumb": "assets/thumb/p1602.jpg",
+    "display": "assets/display/p1602.jpg",
+    "beauty": 6.15,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1608",
+    "thumb": "assets/thumb/p1608.jpg",
+    "display": "assets/display/p1608.jpg",
+    "beauty": 6.15,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   }
+  ]
+ },
+ {
+  "day": 17,
+  "date": "2026-09-24",
+  "label": "Thursday, September 24",
+  "location": "Vietnam",
+  "count": 111,
+  "photos": [
+   {
+    "id": "p1647",
+    "thumb": "assets/thumb/p1647.jpg",
+    "display": "assets/display/p1647.jpg",
+    "beauty": 7.45,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1646",
+    "thumb": "assets/thumb/p1646.jpg",
+    "display": "assets/display/p1646.jpg",
+    "beauty": 7.35,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1670",
+    "thumb": "assets/thumb/p1670.jpg",
+    "display": "assets/display/p1670.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Selfies",
+     "Together",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1671",
+    "thumb": "assets/thumb/p1671.jpg",
+    "display": "assets/display/p1671.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Selfies",
+     "Together",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1636",
+    "thumb": "assets/thumb/p1636.jpg",
+    "display": "assets/display/p1636.jpg",
+    "beauty": 7.15,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1637",
+    "thumb": "assets/thumb/p1637.jpg",
+    "display": "assets/display/p1637.jpg",
+    "beauty": 7.15,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1644",
+    "thumb": "assets/thumb/p1644.jpg",
+    "display": "assets/display/p1644.jpg",
+    "beauty": 7.1,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1632",
+    "thumb": "assets/thumb/p1632.jpg",
+    "display": "assets/display/p1632.jpg",
+    "beauty": 7.0,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1702",
+    "thumb": "assets/thumb/p1702.jpg",
+    "display": "assets/display/p1702.jpg",
+    "beauty": 7.0,
+    "tags": [
+     "Vietnam",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1634",
+    "thumb": "assets/thumb/p1634.jpg",
+    "display": "assets/display/p1634.jpg",
+    "beauty": 6.95,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1642",
+    "thumb": "assets/thumb/p1642.jpg",
+    "display": "assets/display/p1642.jpg",
+    "beauty": 6.9,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1633",
+    "thumb": "assets/thumb/p1633.jpg",
+    "display": "assets/display/p1633.jpg",
+    "beauty": 6.85,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1638",
+    "thumb": "assets/thumb/p1638.jpg",
+    "display": "assets/display/p1638.jpg",
+    "beauty": 6.85,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1643",
+    "thumb": "assets/thumb/p1643.jpg",
+    "display": "assets/display/p1643.jpg",
+    "beauty": 6.8,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   }
+  ]
+ },
+ {
+  "day": 18,
+  "date": "2026-09-25",
+  "label": "Friday, September 25",
+  "location": "Vietnam",
+  "count": 163,
+  "photos": [
+   {
+    "id": "p1750",
+    "thumb": "assets/thumb/p1750.jpg",
+    "display": "assets/display/p1750.jpg",
+    "beauty": 8.0,
+    "tags": [
+     "Vietnam",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1756",
+    "thumb": "assets/thumb/p1756.jpg",
+    "display": "assets/display/p1756.jpg",
+    "beauty": 8.0,
+    "tags": [
+     "Vietnam",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1751",
+    "thumb": "assets/thumb/p1751.jpg",
+    "display": "assets/display/p1751.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Vietnam",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1754",
+    "thumb": "assets/thumb/p1754.jpg",
+    "display": "assets/display/p1754.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Vietnam",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1755",
+    "thumb": "assets/thumb/p1755.jpg",
+    "display": "assets/display/p1755.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Vietnam",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1765",
+    "thumb": "assets/thumb/p1765.jpg",
+    "display": "assets/display/p1765.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Vietnam",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1813",
+    "thumb": "assets/thumb/p1813.jpg",
+    "display": "assets/display/p1813.jpg",
+    "beauty": 7.75,
+    "tags": [
+     "Vietnam",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1739",
+    "thumb": "assets/thumb/p1739.jpg",
+    "display": "assets/display/p1739.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1761",
+    "thumb": "assets/thumb/p1761.jpg",
+    "display": "assets/display/p1761.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Vietnam",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1814",
+    "thumb": "assets/thumb/p1814.jpg",
+    "display": "assets/display/p1814.jpg",
+    "beauty": 7.5,
+    "tags": [
+     "Vietnam",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1825",
+    "thumb": "assets/thumb/p1825.jpg",
+    "display": "assets/display/p1825.jpg",
+    "beauty": 7.4,
+    "tags": [
+     "Vietnam",
+     "Scenery & Skyline",
+     "Landmarks & Architecture"
+    ]
+   },
+   {
+    "id": "p1808",
+    "thumb": "assets/thumb/p1808.jpg",
+    "display": "assets/display/p1808.jpg",
+    "beauty": 7.35,
+    "tags": [
+     "Vietnam",
+     "Scenery & Skyline"
+    ]
+   },
+   {
+    "id": "p1738",
+    "thumb": "assets/thumb/p1738.jpg",
+    "display": "assets/display/p1738.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   },
+   {
+    "id": "p1740",
+    "thumb": "assets/thumb/p1740.jpg",
+    "display": "assets/display/p1740.jpg",
+    "beauty": 7.25,
+    "tags": [
+     "Food",
+     "Vietnam"
+    ]
+   }
+  ]
+ },
+ {
+  "day": 19,
+  "date": "2026-09-26",
+  "label": "Saturday, September 26",
+  "location": "Vietnam",
+  "count": 1,
+  "photos": [
+   {
+    "id": "p1901",
+    "thumb": "assets/thumb/p1901.jpg",
+    "display": "assets/display/p1901.jpg",
+    "beauty": 5.0,
+    "tags": [
+     "Vietnam"
+    ]
+   }
+  ]
+ }
+]

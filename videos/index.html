@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Honeymoon Videos — Giamo &amp; Kim Uyên</title>
   <meta name="google" content="notranslate">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="icon" href="../favicon.ico" sizes="any">
 
   <script>
     (function () {
@@ -141,6 +143,13 @@
       color: var(--gold-dim);
       margin-top: 14px;
     }
+    .gh-stats {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      color: var(--gold-dark);
+      margin-top: 18px;
+    }
 
     /* ── CONTROLS ────────────────────────── */
     .controls {
@@ -187,6 +196,87 @@
       color: var(--gold-dark);
       text-align: center;
     }
+
+    /* ── FILTER DROPDOWN ────────────────────── */
+    .filter-dropdown { position: relative; display: inline-block; }
+    .filter-trigger {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      color: var(--gold-dim);
+      background: var(--chip-bg);
+      border: 1.5px solid var(--border);
+      padding: 9px 18px;
+      cursor: pointer;
+      transition: all 0.2s;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .filter-trigger:hover, .filter-trigger.open { border-color: var(--gold); color: var(--text-bright); }
+    .filter-trigger .caret { font-size: 9px; transition: transform 0.2s; }
+    .filter-trigger.open .caret { transform: rotate(180deg); }
+    .filter-panel {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--chip-bg);
+      border: 1.5px solid var(--border);
+      padding: 10px;
+      display: none;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 260px;
+      max-height: 60vh;
+      overflow-y: auto;
+      z-index: 50;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+    .filter-panel.open { display: flex; }
+    .filter-option {
+      font-family: 'EB Garamond', serif;
+      font-size: 15px;
+      color: var(--text-dim);
+      padding: 8px 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+    .filter-option:hover { background: color-mix(in srgb, var(--gold-dim) 14%, transparent); }
+    .filter-option .box {
+      width: 14px; height: 14px;
+      border: 1.5px solid var(--gold-dim);
+      flex-shrink: 0;
+      position: relative;
+    }
+    .filter-option.checked .box { background: var(--gold-dim); }
+    .filter-option.checked .box::after {
+      content: ''; position: absolute; left: 3px; top: 0px;
+      width: 4px; height: 8px;
+      border: solid var(--bg);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+    .filter-option.checked { color: var(--text-bright); }
+    .filter-option .count { margin-left: auto; font-size: 11px; color: var(--gold-dark); }
+    .filter-clear {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      color: var(--gold-dim);
+      text-align: center;
+      padding: 8px;
+      cursor: pointer;
+      border-top: 1px solid var(--border);
+      margin-top: 4px;
+    }
+    .filter-clear:hover { color: var(--text-bright); }
 
     /* ── GRID ────────────────────────────── */
     .grid-wrap { max-width: 1400px; margin: 0 auto; padding: 0 16px 100px; }
@@ -300,7 +390,7 @@
       border: 1px solid var(--gold-dim);
       padding: 5px 12px;
     }
-    .lb-close, .lb-prev, .lb-next {
+    .lb-close, .lb-prev, .lb-next, .lb-fullscreen {
       position: fixed;
       background: transparent;
       border: 1px solid var(--border);
@@ -311,8 +401,9 @@
       display: flex; align-items: center; justify-content: center;
       transition: all 0.2s;
     }
-    .lb-close:hover, .lb-prev:hover, .lb-next:hover { background: var(--gold-dim); color: var(--bg); }
+    .lb-close:hover, .lb-prev:hover, .lb-next:hover, .lb-fullscreen:hover { background: var(--gold-dim); color: var(--bg); }
     .lb-close { top: 20px; right: 20px; }
+    .lb-fullscreen { top: 20px; right: 74px; font-size: 15px; }
     .lb-prev { left: 20px; top: 50%; transform: translateY(-50%); }
     .lb-next { right: 20px; top: 50%; transform: translateY(-50%); }
     @media (max-width: 640px) {
@@ -320,6 +411,7 @@
       .lb-prev { left: 8px; }
       .lb-next { right: 8px; }
       .lb-close { top: 10px; right: 10px; }
+      .lb-fullscreen { top: 10px; right: 58px; width: 38px; height: 38px; font-size: 13px; }
     }
 
     footer {
@@ -339,6 +431,8 @@
     <div class="top-bar-links">
       <a class="back-link" href="../index.html">← Home</a>
       <a class="back-link" href="../gallery/index.html">Photos</a>
+      <a class="back-link" href="../map/index.html">Map</a>
+      <a class="back-link" href="../timeline/index.html">Timeline</a>
     </div>
     <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle light / dark">☀</button>
   </nav>
@@ -347,13 +441,20 @@
     <p class="gh-eyebrow">✦ &nbsp; Japan &amp; Vietnam &nbsp; ✦</p>
     <h1 class="gh-title">Honeymoon Videos</h1>
     <p class="gh-sub">8 – 26 September</p>
+    <p class="gh-stats">1,899 photos &nbsp;·&nbsp; 138 videos &nbsp;·&nbsp; 18 days &nbsp;·&nbsp; 2 countries</p>
   </header>
 
   <div class="controls">
-    <div class="filter-row" id="filter-row"></div>
+    <div class="filter-dropdown" id="filter-dropdown">
+      <button class="filter-trigger" id="filter-trigger" onclick="toggleFilterPanel()">
+        <span id="filter-trigger-label">All Tags</span> <span class="caret">▾</span>
+      </button>
+      <div class="filter-panel" id="filter-panel"></div>
+    </div>
     <div class="sort-row">
       <div class="chip active" data-sort="beauty" onclick="setSort('beauty', this)">✦ Giamo's Favorites</div>
       <div class="chip" data-sort="chrono" onclick="setSort('chrono', this)">Chronological</div>
+      <div class="chip" onclick="startSlideshow()">▶ Slideshow</div>
     </div>
     <p class="count-label" id="count-label"></p>
   </div>
@@ -367,6 +468,7 @@
 
   <div class="lightbox" id="lightbox">
     <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <button class="lb-fullscreen" id="lb-fullscreen-btn" onclick="toggleFullscreen()" title="Fullscreen">⛶</button>
     <button class="lb-prev" onclick="navLightbox(-1)">‹</button>
     <button class="lb-next" onclick="navLightbox(1)">›</button>
     <div class="lb-media-wrap" id="lb-media-wrap"></div>
@@ -374,7 +476,11 @@
   </div>
 
   <script>
-    const TAGS = ['Selfies', 'Japan', 'Vietnam', 'Food', 'Together'];
+    const TAGS = [
+      'Japan', 'Vietnam', 'Together', 'Selfies', 'Food',
+      'Scenery & Skyline', 'Temples & Shrines', 'Landmarks & Architecture',
+      'Nature & Animals', 'Street Life', 'Nightlife', 'Pool & Beach', 'Culture & Performances'
+    ];
     let ITEMS = [];
     let visible = [];
     let activeTags = new Set();
@@ -400,32 +506,47 @@
     }
 
     function buildFilterRow() {
-      const row = document.getElementById('filter-row');
-      const allChip = document.createElement('div');
-      allChip.className = 'chip active';
-      allChip.textContent = 'All';
-      allChip.onclick = () => { activeTags.clear(); refreshChips(); applyFilters(); };
-      row.appendChild(allChip);
+      const panel = document.getElementById('filter-panel');
+      const counts = {};
+      TAGS.forEach(t => { counts[t] = ITEMS.filter(it => it.tags.includes(t)).length; });
       TAGS.forEach(tag => {
-        const chip = document.createElement('div');
-        chip.className = 'chip';
-        chip.textContent = tag;
-        chip.dataset.tag = tag;
-        chip.onclick = () => {
+        const opt = document.createElement('div');
+        opt.className = 'filter-option';
+        opt.dataset.tag = tag;
+        opt.innerHTML = `<span class="box"></span><span>${tag}</span><span class="count">${counts[tag]}</span>`;
+        opt.onclick = () => {
           if (activeTags.has(tag)) activeTags.delete(tag); else activeTags.add(tag);
           refreshChips();
           applyFilters();
         };
-        row.appendChild(chip);
+        panel.appendChild(opt);
       });
+      const clear = document.createElement('div');
+      clear.className = 'filter-clear';
+      clear.textContent = 'Clear all';
+      clear.onclick = () => { activeTags.clear(); refreshChips(); applyFilters(); };
+      panel.appendChild(clear);
     }
     function refreshChips() {
-      const row = document.getElementById('filter-row');
-      [...row.children].forEach(chip => {
-        if (!chip.dataset.tag) { chip.classList.toggle('active', activeTags.size === 0); return; }
-        chip.classList.toggle('active', activeTags.has(chip.dataset.tag));
+      const panel = document.getElementById('filter-panel');
+      [...panel.querySelectorAll('.filter-option')].forEach(opt => {
+        opt.classList.toggle('checked', activeTags.has(opt.dataset.tag));
       });
+      const label = document.getElementById('filter-trigger-label');
+      label.textContent = activeTags.size === 0 ? 'All Tags' :
+        activeTags.size === 1 ? [...activeTags][0] : `${activeTags.size} tags selected`;
     }
+    function toggleFilterPanel() {
+      document.getElementById('filter-panel').classList.toggle('open');
+      document.getElementById('filter-trigger').classList.toggle('open');
+    }
+    document.addEventListener('click', e => {
+      const dd = document.getElementById('filter-dropdown');
+      if (dd && !dd.contains(e.target)) {
+        document.getElementById('filter-panel').classList.remove('open');
+        document.getElementById('filter-trigger').classList.remove('open');
+      }
+    });
     function setSort(mode, el) {
       sortMode = mode;
       document.querySelectorAll('.sort-row .chip').forEach(c => c.classList.remove('active'));
@@ -486,7 +607,27 @@
       document.getElementById('lightbox').classList.remove('open');
       const wrap = document.getElementById('lb-media-wrap');
       wrap.innerHTML = '';
+      if (document.fullscreenElement) document.exitFullscreen();
+      slideshowActive = false;
     }
+    let slideshowActive = false;
+    function startSlideshow() {
+      if (!visible.length) return;
+      slideshowActive = true;
+      openLightbox(0);
+    }
+    function toggleFullscreen() {
+      const lb = document.getElementById('lightbox');
+      if (document.fullscreenElement) {
+        document.exitFullscreen();
+      } else if (lb.requestFullscreen) {
+        lb.requestFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const btn = document.getElementById('lb-fullscreen-btn');
+      if (btn) btn.textContent = document.fullscreenElement ? '⤢' : '⛶';
+    });
     function navLightbox(delta) {
       lbIndex = (lbIndex + delta + visible.length) % visible.length;
       renderLightbox();
@@ -501,6 +642,9 @@
       v.autoplay = true;
       v.playsInline = true;
       v.preload = 'metadata';
+      v.tabIndex = -1;
+      v.setAttribute('controlsList', 'nofullscreen');
+      v.addEventListener('ended', () => { if (slideshowActive) navLightbox(1); });
       wrap.appendChild(v);
       const tagsEl = document.getElementById('lb-tags');
       tagsEl.innerHTML = '';
@@ -514,18 +658,18 @@
     document.addEventListener('keydown', e => {
       if (!document.getElementById('lightbox').classList.contains('open')) return;
       if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') navLightbox(-1);
-      if (e.key === 'ArrowRight') navLightbox(1);
+      if (e.key === 'ArrowLeft') { e.preventDefault(); navLightbox(-1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); navLightbox(1); }
     });
     document.getElementById('lightbox').addEventListener('click', e => {
       if (e.target.id === 'lightbox') closeLightbox();
     });
 
-    buildFilterRow();
     fetch('manifest.json')
       .then(r => r.json())
       .then(data => {
         ITEMS = data.map((it, i) => ({ ...it, order: i }));
+        buildFilterRow();
         applyFilters();
       })
       .catch(err => {
