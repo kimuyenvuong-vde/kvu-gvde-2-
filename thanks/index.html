@@ -98,8 +98,8 @@ body {
   background: color-mix(in srgb, var(--bg) 92%, transparent);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
-  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
-  gap: 6px; padding: 16px 20px;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+  gap: 10px; padding: 12px 20px;
 }
 .lang-bar-right { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
 .lang-bar-label {
@@ -107,19 +107,26 @@ body {
   letter-spacing: 0.3em; color: var(--gold-dim); margin-right: 4px;
 }
 
-/* ── BRAND NAV (logo + Home/Thanks) ─────── */
-.brand-nav { display: flex; align-items: center; gap: 12px; }
-.brand-logo { height: 88px; width: auto; display: block; user-select: none; -webkit-user-drag: none; }
-@media (max-width: 480px) { .brand-logo { height: 60px; } }
+/* ── BRAND NAV (Home/Thanks links) ────────── */
+.brand-nav { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .brand-link {
   font-family: 'Cinzel', serif; font-size: 10px; font-weight: 500;
   letter-spacing: 0.12em; color: var(--gold-dim); text-decoration: none;
   border: 1px solid var(--border); padding: 5px 13px; cursor: pointer; transition: all 0.22s;
 }
 .brand-link:hover, .brand-link.active { background: var(--border); color: var(--text-bright); }
+
+/* ── CENTERED LOGO ─────────────────────────── */
+.brand-logo-wrap { display: flex; align-items: center; justify-self: center; }
+.brand-logo { height: 64px; width: auto; display: block; user-select: none; -webkit-user-drag: none; }
+[data-theme="dark"] .brand-logo.logo-dark { display: none; }
+[data-theme="light"] .brand-logo.logo-gold { display: none; }
+@media (max-width: 480px) { .brand-logo { height: 44px; } }
 @media (max-width: 640px) {
-  .brand-nav { order: -1; flex-basis: 100%; justify-content: center; margin-bottom: 4px; }
-  .lang-bar-right { flex-basis: 100%; justify-content: center; }
+  .lang-bar { grid-template-columns: 1fr 1fr; }
+  .brand-logo-wrap { order: -1; grid-column: 1 / -1; justify-self: center; margin-bottom: 2px; }
+  .brand-nav { justify-content: flex-start; }
+  .lang-bar-right { justify-content: flex-end; }
 }
 .lang-btn, .theme-btn, .music-btn {
   background: transparent; border: 1px solid var(--border); color: var(--gold-dim);
@@ -418,9 +425,12 @@ footer { text-align: center; padding: 56px 24px 48px; border-top: 1px solid var(
 
 <nav class="lang-bar">
   <div class="brand-nav">
-    <img class="brand-logo" id="brand-logo" src="../logo.png" alt="The Van den Eerenbeemts">
     <a class="brand-link" href="../index.html" data-i18n="nav_home">Home</a>
     <a class="brand-link" href="./index.html" data-i18n="nav_thanks">Thanks</a>
+  </div>
+  <div class="brand-logo-wrap" id="brand-logo">
+    <img class="brand-logo logo-gold" src="../monogram-gold.png" alt="The Van den Eerenbeemts">
+    <img class="brand-logo logo-dark" src="../monogram-dark.png" alt="The Van den Eerenbeemts">
   </div>
   <div class="lang-bar-right">
     <span class="lang-bar-label" data-i18n="lang_label">Language</span>

@@ -376,7 +376,10 @@
       max-width: 92vw; max-height: 72vh;
       object-fit: contain;
       background: #000;
+      opacity: 0;
+      transition: opacity 0.35s ease;
     }
+    .lb-media-wrap video.visible { opacity: 1; }
     .lb-tags {
       display: flex; gap: 8px; flex-wrap: wrap;
       justify-content: center;
@@ -635,25 +638,39 @@
     function renderLightbox() {
       const it = visible[lbIndex];
       const wrap = document.getElementById('lb-media-wrap');
-      wrap.innerHTML = '';
-      const v = document.createElement('video');
-      v.src = it.video;
-      v.controls = true;
-      v.autoplay = true;
-      v.playsInline = true;
-      v.preload = 'metadata';
-      v.tabIndex = -1;
-      v.setAttribute('controlsList', 'nofullscreen');
-      v.addEventListener('ended', () => { if (slideshowActive) navLightbox(1); });
-      wrap.appendChild(v);
-      const tagsEl = document.getElementById('lb-tags');
-      tagsEl.innerHTML = '';
-      it.tags.forEach(t => {
-        const span = document.createElement('span');
-        span.className = 'lb-tag';
-        span.textContent = t;
-        tagsEl.appendChild(span);
-      });
+      const existing = wrap.querySelector('video');
+
+      const insertNew = () => {
+        wrap.innerHTML = '';
+        const v = document.createElement('video');
+        v.src = it.video;
+        v.controls = true;
+        v.autoplay = true;
+        v.playsInline = true;
+        v.preload = 'metadata';
+        v.tabIndex = -1;
+        v.setAttribute('controlsList', 'nofullscreen');
+        v.addEventListener('ended', () => { if (slideshowActive) navLightbox(1); });
+        wrap.appendChild(v);
+        void v.offsetWidth;
+        requestAnimationFrame(() => v.classList.add('visible'));
+
+        const tagsEl = document.getElementById('lb-tags');
+        tagsEl.innerHTML = '';
+        it.tags.forEach(t => {
+          const span = document.createElement('span');
+          span.className = 'lb-tag';
+          span.textContent = t;
+          tagsEl.appendChild(span);
+        });
+      };
+
+      if (existing) {
+        existing.classList.remove('visible');
+        setTimeout(insertNew, 350);
+      } else {
+        insertNew();
+      }
     }
     document.addEventListener('keydown', e => {
       if (!document.getElementById('lightbox').classList.contains('open')) return;

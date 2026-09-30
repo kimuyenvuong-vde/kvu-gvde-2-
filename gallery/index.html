@@ -365,9 +365,12 @@
     .lb-media-wrap img, .lb-media-wrap video {
       max-width: 92vw; max-height: 72vh;
       object-fit: contain;
-      animation: lb-fade-in 0.5s ease;
+      opacity: 0;
+      transition: opacity 0.35s ease;
     }
-    @keyframes lb-fade-in { from { opacity: 0; } to { opacity: 1; } }
+    .lb-media-wrap img.visible, .lb-media-wrap video.visible {
+      opacity: 1;
+    }
     .lb-tags {
       display: flex; gap: 8px; flex-wrap: wrap;
       justify-content: center;
@@ -623,27 +626,42 @@
     function renderLightbox() {
       const it = visible[lbIndex];
       const wrap = document.getElementById('lb-media-wrap');
-      wrap.innerHTML = '';
-      if (it.video) {
-        const v = document.createElement('video');
-        v.src = it.video;
-        v.controls = true;
-        v.autoplay = true;
-        v.preload = 'metadata';
-        wrap.appendChild(v);
+      const existing = wrap.querySelector('img, video');
+
+      const insertNew = () => {
+        wrap.innerHTML = '';
+        let el;
+        if (it.video) {
+          el = document.createElement('video');
+          el.src = it.video;
+          el.controls = true;
+          el.autoplay = true;
+          el.preload = 'metadata';
+        } else {
+          el = document.createElement('img');
+          el.src = it.display;
+        }
+        wrap.appendChild(el);
+        // Force a reflow so the opacity transition actually runs.
+        void el.offsetWidth;
+        requestAnimationFrame(() => el.classList.add('visible'));
+
+        const tagsEl = document.getElementById('lb-tags');
+        tagsEl.innerHTML = '';
+        it.tags.forEach(t => {
+          const span = document.createElement('span');
+          span.className = 'lb-tag';
+          span.textContent = t;
+          tagsEl.appendChild(span);
+        });
+      };
+
+      if (existing) {
+        existing.classList.remove('visible');
+        setTimeout(insertNew, 350);
       } else {
-        const img = document.createElement('img');
-        img.src = it.display;
-        wrap.appendChild(img);
+        insertNew();
       }
-      const tagsEl = document.getElementById('lb-tags');
-      tagsEl.innerHTML = '';
-      it.tags.forEach(t => {
-        const span = document.createElement('span');
-        span.className = 'lb-tag';
-        span.textContent = t;
-        tagsEl.appendChild(span);
-      });
     }
     document.addEventListener('keydown', e => {
       if (!document.getElementById('lightbox').classList.contains('open')) return;

@@ -118,7 +118,8 @@
     .lightbox { position: fixed; inset: 0; background: var(--overlay-bg); z-index: 300; display: none; align-items: center; justify-content: center; flex-direction: column; padding: 20px; }
     .lightbox.open { display: flex; }
     .lb-media-wrap { max-width: 92vw; max-height: 72vh; display: flex; align-items: center; justify-content: center; }
-    .lb-media-wrap img { max-width: 92vw; max-height: 72vh; object-fit: contain; }
+    .lb-media-wrap img { max-width: 92vw; max-height: 72vh; object-fit: contain; opacity: 0; transition: opacity 0.35s ease; }
+    .lb-media-wrap img.visible { opacity: 1; }
     .lb-tags { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 18px; }
     .lb-tag { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.16em; color: var(--gold-pale); border: 1px solid var(--gold-dim); padding: 5px 12px; }
     .lb-close, .lb-prev, .lb-next {
@@ -201,18 +202,32 @@
     function renderLightbox() {
       const it = currentDayPhotos[lbIndex];
       const wrap = document.getElementById('lb-media-wrap');
-      wrap.innerHTML = '';
-      const img = document.createElement('img');
-      img.src = '../gallery/' + it.display;
-      wrap.appendChild(img);
-      const tagsEl = document.getElementById('lb-tags');
-      tagsEl.innerHTML = '';
-      it.tags.forEach(t => {
-        const span = document.createElement('span');
-        span.className = 'lb-tag';
-        span.textContent = t;
-        tagsEl.appendChild(span);
-      });
+      const existing = wrap.querySelector('img');
+
+      const insertNew = () => {
+        wrap.innerHTML = '';
+        const img = document.createElement('img');
+        img.src = '../gallery/' + it.display;
+        wrap.appendChild(img);
+        void img.offsetWidth;
+        requestAnimationFrame(() => img.classList.add('visible'));
+
+        const tagsEl = document.getElementById('lb-tags');
+        tagsEl.innerHTML = '';
+        it.tags.forEach(t => {
+          const span = document.createElement('span');
+          span.className = 'lb-tag';
+          span.textContent = t;
+          tagsEl.appendChild(span);
+        });
+      };
+
+      if (existing) {
+        existing.classList.remove('visible');
+        setTimeout(insertNew, 350);
+      } else {
+        insertNew();
+      }
     }
     document.addEventListener('keydown', e => {
       if (!document.getElementById('lightbox').classList.contains('open')) return;
